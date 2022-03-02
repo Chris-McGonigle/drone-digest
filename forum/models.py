@@ -9,11 +9,12 @@ class Topic(models.Model):
 
     def __str__(self):
         return self.name
-        
 
 # Class to create unique threads
 
 class Thread(models.Model):
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    subject = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=150)
     description = models.TextField(null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
