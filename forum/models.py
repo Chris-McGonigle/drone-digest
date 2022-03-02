@@ -17,8 +17,8 @@ class Thread(models.Model):
 # Class to create individual user posts      
 
 class Post(models.Model):
-    author = models.ForeignKey(User, on_delete=models.cascade)
-    thread = models.ForeignKey(Thread, on_delete=models.cascade)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    thread = models.ForeignKey(Thread, on_delete=models.CASCADE)
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
