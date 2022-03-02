@@ -2,6 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 
+# Class to generate top level subject heading
+
+class Topic(models.Model):
+    subject = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.name
+        
 
 # Class to create unique threads
 
