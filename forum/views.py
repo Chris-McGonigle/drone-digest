@@ -1,9 +1,14 @@
 from django.shortcuts import render
+from .models import Thread
 
 
 def homepage(request):
-    return render (request, 'home.html')
+    threads = Thread.objects.all()
+    context = {'threads': threads}    
+    return render (request, 'home.html', context)
 
 
-def threads(request):
-    return render (request, 'threads.html')
+def threads(request, pk):
+    thread = Thread.objects.get(id=pk)
+    context = {'thread': thread}        
+    return render (request, 'threads.html', context)

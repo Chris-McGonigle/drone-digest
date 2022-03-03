@@ -4,4 +4,16 @@
 
 <h1>Homepage Template</h1>
 
+<!--Loop to display threads-->
+
+<div>
+    <div>
+        {% for thread in threads %}
+            <div>
+                <h2>{{thread.id}} - {{thread.name}}</h2>
+            </div>
+        {% endfor %}     
+    </div> 
+</div>     
+
 {% endblock %}
