@@ -10,7 +10,7 @@
     <div>
         {% for thread in threads %}
             <div>
-                <h2>{{thread.id}} - {{thread.name}}</h2>
+                <h2>{{thread.id}} - <a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
             </div>
         {% endfor %}     
     </div> 
