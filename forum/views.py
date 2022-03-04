@@ -35,6 +35,12 @@ def newThread(request):
 def updateThread(request, pk):
     thread = Thread.objects.get(id=pk)
     form = ThreadForm(instance=thread)
+    if request.method == "POST":
+        form = ThreadForm(request.POST, instance=thread)
+        if form.is_valid():
+            form.save()
+            return redirect('homepage')
+
     context = {'form': form}
     return render(request, 'new-thread.html', context)
 
