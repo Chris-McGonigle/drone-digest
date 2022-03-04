@@ -19,11 +19,11 @@ def threads(request, pk):
 # Renders new thread and sends input to back end
 
 def newThread(request):
-    thread = ThreadForm()
+    form = ThreadForm()
     if request.method == "POST":
-        thread = ThreadForm(request.POST)
-        if thread.is_valid():
-            thread.save()
+        form = ThreadForm(request.POST)
+        if form.is_valid():
+            form.save()
             return redirect('homepage')
-    context = {'thread': thread}
+    context = {'form': form}
     return render(request, 'new-thread.html', context) 
