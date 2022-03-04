@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.homepage, name="homepage"),
     path('threads/<str:pk>', views.threads, name="threads"),
-    path('create-thread', views.createThread, name="create-thread"),
+    path('new-thread/', views.newThread, name="new-thread"),
 ]
