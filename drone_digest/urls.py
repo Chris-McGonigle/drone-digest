@@ -7,4 +7,5 @@ urlpatterns = [
     path('', views.homepage, name="homepage"),
     path('threads/<str:pk>', views.threads, name="threads"),
     path('new-thread/', views.newThread, name="new-thread"),
+    path('update-thread/<str:pk>', views.updateThread, name="update-thread"),
 ]

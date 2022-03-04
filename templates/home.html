@@ -15,6 +15,7 @@
                 <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
             </div>
             <div>Author: {{thread.author}}</div>
+            <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
         {% endfor %}     
     </div> 
 </div>     

@@ -16,6 +16,7 @@ def threads(request, pk):
     context = {'thread': thread}        
     return render(request, 'threads.html', context)
 
+
 # Renders new thread and sends input to back end
 
 def newThread(request):
@@ -26,4 +27,14 @@ def newThread(request):
             form.save()
             return redirect('homepage')
     context = {'form': form}
-    return render(request, 'new-thread.html', context) 
+    return render(request, 'new-thread.html', context)
+
+
+# View to update existing thread
+
+def updateThread(request, pk):
+    thread = Thread.objects.get(id=pk)
+    form = ThreadForm(instance=thread)
+    context = {'form': form}
+    return render(request, 'new-thread.html', context)
+
