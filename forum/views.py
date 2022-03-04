@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Thread, Post, Topic
+from .forms import ThreadForm 
 
 
 def homepage(request):
@@ -13,6 +14,8 @@ def threads(request, pk):
     context = {'thread': thread}        
     return render(request, 'threads.html', context)
 
+
 def newThread(request):
-    context = {}
+    thread = ThreadForm()
+    context = {'thread': thread}
     return render(request, 'new-thread.html', context) 
