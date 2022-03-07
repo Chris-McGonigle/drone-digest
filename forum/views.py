@@ -2,6 +2,13 @@ from django.shortcuts import render, redirect
 from .models import Thread, Post, Topic
 from .forms import ThreadForm 
 
+# Renders signup page
+
+def signupPage(request):
+    context = {}    
+    return render(request, 'signup-logon.html', context)
+
+
 # Renders homepage view
 
 def homepage(request):
