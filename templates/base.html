@@ -13,6 +13,16 @@
         <a href="{% url 'signup' %}"><h2>Log On</h2></a>
     </header>
 
+<!--Loop to display flash message is user not authenticated-->
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     {% block content %}
 
     {% endblock %}
