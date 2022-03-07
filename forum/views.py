@@ -29,6 +29,13 @@ def signupPage(request):
     return render(request, 'signup-logon.html', context)
 
 
+# Renders logout view
+
+def logoutPage(request):
+    logout(request)
+    return redirect('homepage')        
+
+
 # Renders homepage view
 
 def homepage(request):

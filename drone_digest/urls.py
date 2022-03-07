@@ -4,6 +4,7 @@ from forum import views
 
 urlpatterns = [
     path('logon/', views.signupPage, name="signup"),
+    path('logout/', views.logoutPage, name="logout"),
 
     path('admin/', admin.site.urls),
 
