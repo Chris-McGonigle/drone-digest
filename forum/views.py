@@ -43,3 +43,14 @@ def updateThread(request, pk):
     context = {'form': form}
     return render(request, 'new-thread.html', context)
 
+
+# View to delete threads
+
+def deleteThread(request, pk):
+    thread = Thread.objects.get(id=pk)
+    if request.method == "POST":
+        thread.delete()
+        return redirect('homepage')
+    return render(request, 'confirm-delete.html', {'obj': thread})    
+
+
