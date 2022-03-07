@@ -15,8 +15,14 @@
                 <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
             </div>
             <div>Author: {{thread.author}}</div>
+
+            <!--If statement to hide update and delete thread buttons if user is not thread author-->
+
+            {% if request.user == thread.author %}
             <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
             <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
+            {% endif %}
+            
         {% endfor %}     
     </div> 
 </div>     
