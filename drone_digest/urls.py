@@ -8,4 +8,5 @@ urlpatterns = [
     path('threads/<str:pk>', views.threads, name="threads"),
     path('new-thread/', views.newThread, name="new-thread"),
     path('update-thread/<str:pk>', views.updateThread, name="update-thread"),
+    path('delete-thread/<str:pk>', views.deleteThread, name="delete-thread"),
 ]
