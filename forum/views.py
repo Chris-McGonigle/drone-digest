@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from .models import Thread, Post, Topic
 from .forms import ThreadForm 
 
@@ -53,6 +54,7 @@ def threads(request, pk):
 
 # Renders new thread and sends input to back end
 
+@login_required(login_url='signup')
 def newThread(request):
     form = ThreadForm()
     if request.method == "POST":
@@ -66,6 +68,7 @@ def newThread(request):
 
 # View to update existing thread
 
+@login_required(login_url='signup')
 def updateThread(request, pk):
     thread = Thread.objects.get(id=pk)
     form = ThreadForm(instance=thread)
@@ -80,6 +83,7 @@ def updateThread(request, pk):
 
 # View to delete threads
 
+@login_required(login_url='signup')
 def deleteThread(request, pk):
     thread = Thread.objects.get(id=pk)
     if request.method == "POST":
