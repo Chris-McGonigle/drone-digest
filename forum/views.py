@@ -40,7 +40,6 @@ def updateThread(request, pk):
         if form.is_valid():
             form.save()
             return redirect('homepage')
-
     context = {'form': form}
     return render(request, 'new-thread.html', context)
 
