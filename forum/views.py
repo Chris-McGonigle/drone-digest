@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Thread, Post, Topic
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
 from .forms import ThreadForm 
 
 # Renders signup page
@@ -16,7 +17,14 @@ def signupPage(request):
             user = User.objects.get(username=username)
         except: 
             messages.error(request, 'This User does not exist, please check and try again')
+        user = authenticate(request, username=username, password=password)
 
+        if user is not None:
+            login(request, user)
+            return redirect('homepage')
+        else:
+            messages.error(request, 'Username or password is incorrect, please check and try again')
+        
     context = {}    
     return render(request, 'signup-logon.html', context)
 
