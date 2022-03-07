@@ -10,7 +10,16 @@
     
     <header>
         <a href="/"><h1>Drone Digest Logo</h1></a>
+
+        <!--If statement to display log in or log out button depending on authenticated state-->
+
+        {% if request.user.is_authenticated %}
+        <a href=""><h2>Log Out</h2></a>
+        {% else %}
         <a href="{% url 'signup' %}"><h2>Log On</h2></a>
+        {% endif %}
+
+        
     </header>
 
 <!--Loop to display flash message is user not authenticated-->
