@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -72,6 +73,10 @@ def newThread(request):
 def updateThread(request, pk):
     thread = Thread.objects.get(id=pk)
     form = ThreadForm(instance=thread)
+
+    if request.user != thread.author:
+        return HttpResponse('Only thread authors can update existing threads') 
+
     if request.method == "POST":
         form = ThreadForm(request.POST, instance=thread)
         if form.is_valid():
@@ -86,6 +91,11 @@ def updateThread(request, pk):
 @login_required(login_url='signup')
 def deleteThread(request, pk):
     thread = Thread.objects.get(id=pk)
+
+    if request.user != thread.author:
+        return HttpResponse('Only thread authors can delete existing threads') 
+
+
     if request.method == "POST":
         thread.delete()
         return redirect('homepage')
