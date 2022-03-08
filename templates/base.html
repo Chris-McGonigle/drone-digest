@@ -14,6 +14,8 @@
         <!--If statement to display log in or log out button depending on authenticated state-->
 
         {% if request.user.is_authenticated %}
+
+        <h4>Hello {{request.user.username}}</h4>
         <a href="{% url 'logout' %}"><h2>Log Out</h2></a>
         {% else %}
         <a href="{% url 'signin' %}"><h2>Log On</h2></a>
