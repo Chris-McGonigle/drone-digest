@@ -16,7 +16,10 @@
     {% for comment in comments %}
 
         <div>
+            {% if request.user == comment.author %}
+            <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
             {{comment.author}} {{comment.created|timesince}} ago 
+            {% endif %}
         </div>
         <br>
         <div>

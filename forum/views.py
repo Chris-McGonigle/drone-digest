@@ -130,3 +130,17 @@ def deleteThread(request, pk):
     return render(request, 'confirm-delete.html', {'obj': thread})    
 
 
+# View to delete posts
+
+@login_required(login_url='signin')
+def deleteComment(request, pk):
+    comment = Post.objects.get(id=pk)
+
+    if request.user != comment.author:
+        return HttpResponse('Only comment authors can delete existing threads') 
+
+
+    if request.method == "POST":
+        comment.delete()
+        return redirect('homepage')
+    return render(request, 'confirm-delete.html', {'obj': comment})    

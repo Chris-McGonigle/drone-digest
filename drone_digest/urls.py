@@ -14,4 +14,5 @@ urlpatterns = [
     path('new-thread/', views.newThread, name="new-thread"),
     path('update-thread/<str:pk>', views.updateThread, name="update-thread"),
     path('delete-thread/<str:pk>', views.deleteThread, name="delete-thread"),
+    path('delete-comment/<str:pk>', views.deleteComment, name="delete-comment"),
 ]
