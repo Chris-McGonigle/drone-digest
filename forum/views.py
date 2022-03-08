@@ -11,6 +11,8 @@ from .forms import ThreadForm
 
 def signupPage(request):
 
+    page = 'signup'
+
     if request.method == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -27,7 +29,7 @@ def signupPage(request):
         else:
             messages.error(request, 'Username or password is incorrect, please check and try again')
         
-    context = {}    
+    context = {'page': page}    
     return render(request, 'signup-logon.html', context)
 
 
@@ -35,7 +37,14 @@ def signupPage(request):
 
 def logoutPage(request):
     logout(request)
-    return redirect('homepage')        
+    return redirect('homepage')
+
+
+# Registering new account
+
+def registerAccount(request):
+    page = 'register'
+    return render(request. 'signup-logon.html')
 
 
 # Renders homepage view
