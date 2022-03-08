@@ -69,7 +69,8 @@ def homepage(request):
 
 def threads(request, pk):
     thread = Thread.objects.get(id=pk)
-    context = {'thread': thread}        
+    comments = thread.post_set.all()
+    context = {'thread': thread, 'comments': comments}        
     return render(request, 'threads.html', context)
 
 
