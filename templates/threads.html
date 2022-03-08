@@ -26,6 +26,13 @@
 
     {% endfor %}
 
+    <div id="make-post">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="post-body" placeholder="Join the conversation here">
+        </form>
+    </div>
+
 </div>
     
 {% endblock %}
