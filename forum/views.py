@@ -69,7 +69,7 @@ def homepage(request):
 
 def threads(request, pk):
     thread = Thread.objects.get(id=pk)
-    comments = thread.post_set.all()
+    comments = thread.post_set.all().order_by('-created')
     context = {'thread': thread, 'comments': comments}        
     return render(request, 'threads.html', context)
 

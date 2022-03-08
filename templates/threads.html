@@ -11,10 +11,12 @@
     <h4>Comments</h4>
     <br>
 
+<!--Loop to display all comments made under each thread-->
+
     {% for comment in comments %}
 
         <div>
-            {{comment.author}} {{comment.created}} 
+            {{comment.author}} {{comment.created|timesince}} ago 
         </div>
         <br>
         <div>
