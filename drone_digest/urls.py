@@ -3,7 +3,7 @@ from django.urls import path
 from forum import views
 
 urlpatterns = [
-    path('logon/', views.signupPage, name="signup"),
+    path('logon/', views.signupPage, name="signin"),
     path('logout/', views.logoutPage, name="logout"),
     path('register/', views.registerAccount, name="register"),
 

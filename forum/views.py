@@ -11,7 +11,7 @@ from .forms import ThreadForm
 
 def signupPage(request):
 
-    page = 'signup'
+    page = 'signin'
 
     if request.method == "POST":
         username = request.POST.get('username')
@@ -44,7 +44,7 @@ def logoutPage(request):
 
 def registerAccount(request):
     page = 'register'
-    return render(request. 'signup-logon.html')
+    return render(request, 'signup-logon.html')
 
 
 # Renders homepage view
@@ -64,7 +64,7 @@ def threads(request, pk):
 
 # Renders new thread and sends input to back end
 
-@login_required(login_url='signup')
+@login_required(login_url='signin')
 def newThread(request):
     form = ThreadForm()
     if request.method == "POST":
@@ -78,7 +78,7 @@ def newThread(request):
 
 # View to update existing thread
 
-@login_required(login_url='signup')
+@login_required(login_url='signin')
 def updateThread(request, pk):
     thread = Thread.objects.get(id=pk)
     form = ThreadForm(instance=thread)
@@ -97,7 +97,7 @@ def updateThread(request, pk):
 
 # View to delete threads
 
-@login_required(login_url='signup')
+@login_required(login_url='signin')
 def deleteThread(request, pk):
     thread = Thread.objects.get(id=pk)
 

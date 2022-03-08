@@ -15,6 +15,9 @@
        <input type="submit" value="Log In">
 
     </form>
+
+    <h3>Not yet a member?</h3>
+    <a href="{% url 'register' %}">Register an account</a>
 </div>
 
 <div>
@@ -24,6 +27,10 @@
        <input type="submit" value="Register Account">
 
     </form>
+
+    <h3>Already a member?</h3>
+    <a href="{% url 'signin' %}">Sign In</a>
+
 </div>
 
 {% endblock %}
