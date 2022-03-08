@@ -25,14 +25,19 @@
         <br>
 
     {% endfor %}
-
-    <div id="make-post">
-        <form method="POST" action="">
-            {% csrf_token %}
-            <input type="text" name="post-body" placeholder="Join the conversation here">
-        </form>
-    </div>
-
 </div>
+
+<!--Post comment input field only appears if user logged on-->
+
+{% if request.user.is_authenticated %}
+
+<div id="make-post">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="post-body" placeholder="Join the conversation here">
+    </form>
+</div>
+
+{% endif %}
     
 {% endblock %}
