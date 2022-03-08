@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 from .models import Thread, Post, Topic
 from .forms import ThreadForm 
 
@@ -43,8 +44,8 @@ def logoutPage(request):
 # Registering new account
 
 def registerAccount(request):
-    page = 'register'
-    return render(request, 'signup-logon.html')
+    form = UserCreationForm()
+    return render(request, 'signup-logon.html', {'form': form})
 
 
 # Renders homepage view
