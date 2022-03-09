@@ -30,7 +30,7 @@
         <!--Loop to display sujects-->
         <div>
             {% for subject in subjects %}
-                <h3><a href="{% url 'homepage' %}?q={{subject}}">{{subject}}</a></h3>
+                <h3><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h3>
             {% endfor %}
         </div>
     </div>

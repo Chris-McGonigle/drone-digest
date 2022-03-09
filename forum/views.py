@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
+from .models import Thread, Post, Topic
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .models import Thread, Post, Topic
 from .forms import ThreadForm 
 
 # Renders signup page
@@ -61,8 +61,10 @@ def registerAccount(request):
 # Renders homepage view
 
 def homepage(request):
-    threads = Thread.objects.all()
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    threads = Thread.objects.filter(subject__subject__icontains=q)
     subjects = Topic.objects.all()
+
     context = {'threads': threads, 'subjects': subjects}    
     return render(request, 'home.html', context)
 
