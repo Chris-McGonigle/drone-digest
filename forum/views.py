@@ -62,7 +62,8 @@ def registerAccount(request):
 
 def homepage(request):
     threads = Thread.objects.all()
-    context = {'threads': threads}    
+    subjects = Topic.objects.all()
+    context = {'threads': threads, 'subjects': subjects}    
     return render(request, 'home.html', context)
 
 # Renders list of threads

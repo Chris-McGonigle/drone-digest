@@ -23,6 +23,12 @@
     <div id="subject-filter">
         <h2>Filter by Subject</h2>
 
+        <!--Loop to display sujects-->
+        
+        {% for subject in subjects%}
+        <h3>{{subject}}</h3>
+        {% endfor %}
+
     </div>
 
     <div id="thread-window">
