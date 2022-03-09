@@ -7,7 +7,7 @@
 <style>
     #home-wrapper {
         display: grid;
-        grid-template-columns: 15% 85%;
+        grid-template-columns: 20% 80%;
     }
 </style>
 
@@ -23,12 +23,16 @@
     <div id="subject-filter">
         <h2>Filter by Subject</h2>
 
-        <!--Loop to display sujects-->
-        
-        {% for subject in subjects%}
-        <h3>{{subject}}</h3>
-        {% endfor %}
+        <div>
+                <h3><a href="{% url 'homepage' %}">All</a></h3>
+        </div>
 
+        <!--Loop to display sujects-->
+        <div>
+            {% for subject in subjects %}
+                <h3><a href="{% url 'homepage' %}?q={{subject}}">{{subject}}</a></h3>
+            {% endfor %}
+        </div>
     </div>
 
     <div id="thread-window">
