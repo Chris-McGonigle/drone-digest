@@ -68,9 +68,10 @@ def homepage(request):
         Q(name__icontains=q) |
         Q(description__icontains=q)
     )
+    thread_total = threads.count()
     subjects = Topic.objects.all()
 
-    context = {'threads': threads, 'subjects': subjects}    
+    context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total}    
     return render(request, 'home.html', context)
 
 # Renders list of threads
