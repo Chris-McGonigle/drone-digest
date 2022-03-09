@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.db.models import Q
 from .forms import ThreadForm 
 
 # Renders signup page
@@ -62,7 +63,11 @@ def registerAccount(request):
 
 def homepage(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
-    threads = Thread.objects.filter(subject__subject__icontains=q)
+    threads = Thread.objects.filter(
+        Q(subject__subject__icontains=q)|
+        Q(name__icontains=q) |
+        Q(description__icontains=q)
+    )
     subjects = Topic.objects.all()
 
     context = {'threads': threads, 'subjects': subjects}    
