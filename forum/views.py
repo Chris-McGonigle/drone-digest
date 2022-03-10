@@ -86,6 +86,7 @@ def threads(request, pk):
             thread=thread,
             body=request.POST.get('post-body')
         )
+        thread.droners.add(request.user)
         return redirect('threads', pk=thread.id)
     context = {'thread': thread, 'comments': comments, 'droners':droners}        
     return render(request, 'threads.html', context)
