@@ -1,108 +1,204 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Drone Digest
 
-Welcome Chris McGonigle,
+Drone Digest is a public chat forum style website aimed at both individuals and commercial enterprises with interests in Unmanned Aerial Vehicles (UAVs), more commonly known as drones.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The pace of change in the UAV market is extraordinary, with new regulations and equipment entering the market numerous times a year. The UAV market is predicted to be worth $63.6 billion by 2025 [*Source*S](https://www.businessinsider.com/drone-industry-analysis-market-trends-growth-forecasts?r=US&IR=T) and will only get larger given technological advances in the use of drones for agriculture, construction and law enforcement to name but a few.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Until now, current offerings for those interested in having a discussion about UAVs are spread far and wide, but only catering to a small niche of the market, for example particular types of aircraft, or split by commercial and hobbyist lines.
 
-## Gitpod Reminders
+The Drone Digest aims to provide a 'one stop shop' for all of these strands, bringing together experience from across the sector so seasoned and budding UAV pilots alike can share experiences, expertise and keep up to date with the latest changes in this ever evolving and growing sector.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+You can view a live version of the [website](http://drone-digest.herokuapp.com/) 
 
-`python3 -m http.server`
+## Table of Contents
 
-A blue button should appear to click: _Make Public_,
+1. [Site Design Considerations](#site-design-considerations)
+    * [User Stories](#user-stories)
+        * [EPIC 1 - User Accounts](#epic-1---user-accounts)
+        * [EPIC 2 - Message Boards](#epic-2---message-boards) 
+        * [EPIC 3 - Post Interactions](#epic-3---post-interactions)
+    * [Wireframes](#wireframes)
+    * [Project Management](#project-management)
+2. [Data Models](#data-models)
+3. [Features](#features)
+    * [Initial Deployment Features](#initial-deployment-features)
+    * [Future Features](#future-features)    
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Site Design Considerations
 
-A blue button should appear to click: _Make Public_,
+### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+#### EPIC 1 - User accounts
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1. As a User, I want to create an account using my email address so that I can create threads and comment on existing posts.
 
-To log into the Heroku toolbelt CLI:
+2. As a User, I want to create an account using my social media log in so that I can create threads and comment on existing posts.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+3. As a User, I want to be able to view posts without logging in so that I can quickly catch up on conversation I have been involved in.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+4. As a User, I want to be able to reset my password  so that I can still access my account if I forget it.
 
-------
+5. As a User, I want to be able to create a basic profile including a profile picture so that I can tell other users a little about myself.
 
-## Release History
+6. As a User, I want to be able to see a history of posts I have made in my profile so that I can easily reference old conversations.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+7. As a User, I want to be abe to see who is currently online so that I can interact with friends made on the platform in real time.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+8. As a User, I want to be able to message other users so that I can interact privately with individuals.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+9. As a User, I want to be able to report accounts so that I can highlight behaviour that goes against the forum rules.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+10. As a Site Admin, I want to be able to create and assign moderators so that I can spread the workload of approving comments.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<br>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+[Back to top](#table-of-contents)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<br>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### EPIC 2 - Message boards
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. As a User, I want to be able to view a list of threads so that I select one to read.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+2. As a User, I want to be able to filter threads by topic so that I select a topic that interests me.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+3. As a User, I want to see a count of activity on a thread so that I can see the number of replies and views on a thread.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+4. As a User, I want to be able to expand a thread so that I can view all of the posts made related to it.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+5. As a User, I want to be able to see a list of who has participated in a thread so that I can easily see people I have interacted with before and new users.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+6. As a User, I want to be able to create a new thread from the homepage so that I don’t have to go into a topic to create one.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+7. As a User, I want to be able to search for topics and threads and users so that I easily find people or topics that interest me.
 
-------
 
-## FAQ about the uptime script
+<br>
 
-**Why have you added this script?**
+[Back to top](#table-of-contents)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<br>
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+#### EPIC 3 - Post interactions
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+1. As a User, I want to be able to create a new post so that I can start a conversation with other people.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+2. As a User, I want to be able to comment on existing posts so that I can be involved in discussions.
 
-**So….?**
+3. As a User, I want to be able to edit existing posts that I have made so that I can amend any mistakes I may have made.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+4. As a User, I want to be able to delete posts that I have made so that I manage my content.
 
-**Can I opt out?**
+5. As a User, I want to be able to see when a post was created or updated so that I can see how recent thread activity was.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+6. As a User, I want to be able to add images to a post so that I so I can share examples or illustrate my point.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+7. As a User, I want to be able to click on a post author so that I can find out further information about them or other posts that they have made.
 
-**Anything more?**
+8. As a User, I want to be able to 'like' a post so that I can interact with the content and see which are the most popular posts.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+9. As a Site Admin, I want to be able to approve or disprove posts so that I can ensure all posts adhere to the site guidelines.
 
----
+10. As a Site Admin, I want to be able to read, update and delete posts so that I can ensure all posts adhere to the site guidelines.
 
-Happy coding!
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+
+### Wireframes
+
+* Homepage
+
+![Desktop](./static/readme-files/wireframes/home-page.png)
+
+* Opened thread
+
+![Desktop](./static/readme-files/wireframes/opened-thread.png)
+
+* User profile page
+
+![Desktop](./static/readme-files/wireframes/user-profile.png)
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+### Project Management
+
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Data Models
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Features
+
+### Initial Deployment Features
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+### Future Features
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+
+## Technologies Used
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Testing
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Deployment
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Credits
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
