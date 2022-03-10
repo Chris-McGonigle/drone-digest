@@ -17,6 +17,7 @@ class Thread(models.Model):
     subject = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=150)
     description = models.TextField(null=True, blank=True)
+    droners = models.ManyToManyField(User, related_name='droners', blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 

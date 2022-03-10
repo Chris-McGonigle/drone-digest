@@ -2,45 +2,76 @@
 
 {% block content %}
 
-<h1>{{thread.name}}</h1>
+<!--Temporary styling-->
 
-<span>{{thread.description}}</span>
+<style>
+    #open-threads {
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+</style>
 
-<div id="post-list">
+<div id="open-threads">
 
-    <h4>Comments</h4>
-    <br>
+    <div class="thread-container">
+    
+        <div class="thread-details">
+        
+            <h1>{{thread.name}}</h1>
 
-<!--Loop to display all comments made under each thread-->
+            <span>{{thread.description}}</span>
 
-    {% for comment in comments %}
-
-        <div>
-            {% if request.user == comment.author %}
-            <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
-            {{comment.author}} {{comment.created|timesince}} ago
-            {% endif %}
         </div>
-        <br>
-        <div>
-            {{comment.body}}
+
+        <div id="post-list">
+
+            <h2>Comments</h2>
+            <br>
+
+            <!--Loop to display all comments made under each thread-->
+
+            {% for comment in comments %}
+
+            <div>
+                {% if request.user == comment.author %}
+                <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
+                {{comment.author}} {{comment.created|timesince}} ago
+                {% endif %}
+            </div>
+            <br>
+            <div>
+                {{comment.body}}
+            </div>
+            <br>
+
+            {% endfor %}
         </div>
-        <br>
 
-    {% endfor %}
+        <!--Post comment input field only appears if user logged on-->
+
+        {% if request.user.is_authenticated %}
+
+        <div id="make-post">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name="post-body" placeholder="Join the conversation here">
+            </form>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+    
+    <div class="droners">
+        
+        <h2>Droners</h2>
+        <hr>
+
+        
+
+    </div>
+
 </div>
-
-<!--Post comment input field only appears if user logged on-->
-
-{% if request.user.is_authenticated %}
-
-<div id="make-post">
-    <form method="POST" action="">
-        {% csrf_token %}
-        <input type="text" name="post-body" placeholder="Join the conversation here">
-    </form>
-</div>
-
-{% endif %}
     
 {% endblock %}
