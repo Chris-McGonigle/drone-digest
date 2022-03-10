@@ -79,6 +79,7 @@ def homepage(request):
 def threads(request, pk):
     thread = Thread.objects.get(id=pk)
     comments = thread.post_set.all().order_by('-created')
+    droners = thread.droners.all()
     if request.method == "POST":
         comment = Post.objects.create(
             author=request.user,
@@ -86,7 +87,7 @@ def threads(request, pk):
             body=request.POST.get('post-body')
         )
         return redirect('threads', pk=thread.id)
-    context = {'thread': thread, 'comments': comments}        
+    context = {'thread': thread, 'comments': comments, 'droners':droners}        
     return render(request, 'threads.html', context)
 
 

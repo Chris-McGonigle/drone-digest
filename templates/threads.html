@@ -19,7 +19,11 @@
         
             <h1>{{thread.name}}</h1>
 
-            <span>{{thread.description}}</span>
+            <p>{{thread.description}}</p>
+
+            <br>
+
+            <span>Started by {{thread.author}} on {{thread.created}}</span>
 
         </div>
 
@@ -35,8 +39,10 @@
             <div>
                 {% if request.user == comment.author %}
                 <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
-                {{comment.author}} {{comment.created|timesince}} ago
                 {% endif %}
+
+                {{comment.author}} {{comment.created|timesince}} ago
+                
             </div>
             <br>
             <div>
@@ -68,7 +74,15 @@
         <h2>Droners</h2>
         <hr>
 
-        
+        <!--Loop to display thread participants-->    
+
+         {% for drone in droners %}
+
+         <div>
+             <p><strong>{{drone.username}}</strong></p>
+         </div>
+         
+         {% endfor %}
 
     </div>
 
