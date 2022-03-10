@@ -7,7 +7,7 @@
 <style>
     #home-wrapper {
         display: grid;
-        grid-template-columns: 20% 80%;
+        grid-template-columns: 10% 70% 20%;
     }
 </style>
 
@@ -61,6 +61,24 @@
             
         {% endfor %}     
     </div> 
+
+    <!--Displays recent forum activity-->
+
+    <div id="activity">
+
+        <h2>Recent Activity</h2>
+        <hr>
+        {% for comment in comments %}
+
+        <div>
+            <small>{{comment.author}} {{comment.created|timesince}}</small>
+            
+            <small>{{post}}</small>
+        </div>
+
+        {% endfor %}
+
+    </div>
 </div>     
 
 {% endblock %}

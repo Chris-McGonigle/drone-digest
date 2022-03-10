@@ -71,14 +71,16 @@ def homepage(request):
     thread_total = threads.count()
     subjects = Topic.objects.all()
 
-    context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total}    
+    comments = Thread.objects.all()
+
+    context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total, 'comments': comments}    
     return render(request, 'home.html', context)
 
 # Renders list of threads
 
 def threads(request, pk):
     thread = Thread.objects.get(id=pk)
-    comments = thread.post_set.all().order_by('-created')
+    comments = thread.post_set.all()
     droners = thread.droners.all()
     if request.method == "POST":
         comment = Post.objects.create(
