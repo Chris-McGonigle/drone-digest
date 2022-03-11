@@ -20,11 +20,11 @@
 <h3>{{thread_total}} open threads</h3>
 
 
-<div id="home-wrapper">
+<div id="home-wrapper" class="container-fluid">
 
     <!--Sidebar to filter threads by subject-->
 
-    <div id="subject-filter">
+    <div id="subject-filter" class="d-none d-lg-block col-lg-3">
         <h2>Filter by Subject</h2>
 
         <div>
@@ -39,18 +39,21 @@
         </div>
     </div>
 
-    <div id="thread-window">
+    <div id="thread-window" class="col-sm-12 col-md-9 col-lg-6">
 
         <!--Loop to display threads-->
         {% for thread in threads %}
             <div>
                 <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
             </div>
-            <div>Author: {{thread.author}}</div>
-            <div>Subject: {{thread.subject}}</div>
-            <div>Created: {{thread.created}}</div>
-            <br>
-            <div>{{thread.description}}</div>
+
+            <div>
+                <p>Author: {{thread.author}}</p>
+                <p>Subject: {{thread.subject}}</p>
+                <p>Created: {{thread.created}}</p>
+                <br>
+                <p>{{thread.description}}</p>
+            </div>
 
             <!--If statement to hide update and delete thread buttons if user is not thread author-->
 
@@ -60,15 +63,17 @@
             {% endif %}
             
         {% endfor %}  
-           
+
     </div> 
 
     <!--Displays recent forum activity-->
 
-    <div id="activity">
+    <div id="activity" class="d-none d-lg-block col-lg-3">
 
         <h2>Recent Activity</h2>
         <hr>
+
+        
         {% for comment in comments %}
 
         <div>

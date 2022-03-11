@@ -15,7 +15,7 @@
 
         <nav class="navbar fixed-top navbar-dark bg-dark">
 
-            <div class="col-3">
+            <div class="col-sm-12 col-md-3">
 
                 <a href="/"><h1>Drone Digest Logo</h1></a>
 
@@ -23,7 +23,7 @@
 
             <!--Header Search Bar-->
 
-            <div class="col-6">
+            <div class="col-sm-10 col-md-6">
 
                 <form class=form-inline action="{% url 'homepage' %}" method="GET">
                     <input id=searchbar class=form-control-lg type="text" name="q" placeholder="Search forum...">
@@ -33,7 +33,7 @@
 
             <!--If statement to display log in or log out button depending on authenticated state-->
 
-            <div class="col-3">
+            <div class="col-sm-2 col-md-3">
 
                 {% if request.user.is_authenticated %}
 
