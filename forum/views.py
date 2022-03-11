@@ -9,9 +9,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db.models import Q
 from .forms import ThreadForm 
 
-# Renders signup page
 
 def signupPage(request):
+    """
+    Renders signup page
+    """
 
     page = 'signin'
 
@@ -35,16 +37,20 @@ def signupPage(request):
     return render(request, 'signup-logon.html', context)
 
 
-# Renders logout view
 
 def logoutPage(request):
+     """
+    Renders logout view
+    """
     logout(request)
     return redirect('homepage')
 
 
-# Registering new account
 
 def registerAccount(request):
+     """
+    Registering new account
+    """
     form = UserCreationForm()
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -59,9 +65,11 @@ def registerAccount(request):
     return render(request, 'signup-logon.html', {'form': form})
 
 
-# Renders homepage view
 
 def homepage(request):
+     """
+    Renders homepage view
+    """
     q = request.GET.get('q') if request.GET.get('q') != None else ''
     threads = Thread.objects.filter(
         Q(subject__subject__icontains=q)|
@@ -76,9 +84,11 @@ def homepage(request):
     context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total, 'comments': comments}    
     return render(request, 'home.html', context)
 
-# Renders list of threads
 
 def threads(request, pk):
+    """
+    Renders list of threads
+    """
     thread = Thread.objects.get(id=pk)
     comments = thread.post_set.all()
     droners = thread.droners.all()
@@ -94,10 +104,12 @@ def threads(request, pk):
     return render(request, 'threads.html', context)
 
 
-# Renders new thread and sends input to back end
 
 @login_required(login_url='signin')
 def newThread(request):
+    """
+    Renders new thread and sends input to back end
+    """
     form = ThreadForm()
     if request.method == "POST":
         form = ThreadForm(request.POST)
@@ -108,10 +120,12 @@ def newThread(request):
     return render(request, 'new-thread.html', context)
 
 
-# View to update existing thread
 
 @login_required(login_url='signin')
 def updateThread(request, pk):
+    """
+    View to update existing thread
+    """
     thread = Thread.objects.get(id=pk)
     form = ThreadForm(instance=thread)
 
@@ -127,10 +141,12 @@ def updateThread(request, pk):
     return render(request, 'new-thread.html', context)
 
 
-# View to delete threads
 
 @login_required(login_url='signin')
 def deleteThread(request, pk):
+    """
+    View to delete threads
+    """
     thread = Thread.objects.get(id=pk)
 
     if request.user != thread.author:
@@ -143,10 +159,12 @@ def deleteThread(request, pk):
     return render(request, 'confirm-delete.html', {'obj': thread})    
 
 
-# View to delete posts
 
 @login_required(login_url='signin')
 def deleteComment(request, pk):
+    """
+    View to delete posts
+    """
     comment = Post.objects.get(id=pk)
 
     if request.user != comment.author:

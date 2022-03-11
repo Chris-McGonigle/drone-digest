@@ -2,17 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 
-# Class to generate top level subject heading
 
 class Topic(models.Model):
+    """
+    Class to generate top level subject heading
+    """
     subject = models.CharField(max_length=250)
 
     def __str__(self):
         return self.subject
 
-# Class to create unique threads
 
 class Thread(models.Model):
+    """
+    Class to create unique threads
+    """
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     subject = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=150)
@@ -27,9 +31,11 @@ class Thread(models.Model):
     def __str__(self):
         return self.name
 
-# Class to create individual user posts      
 
 class Post(models.Model):
+    """
+    Class to create individual user posts 
+    """
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     thread = models.ForeignKey(Thread, on_delete=models.CASCADE)
     body = models.TextField()
