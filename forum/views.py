@@ -39,7 +39,7 @@ def signupPage(request):
 
 
 def logoutPage(request):
-     """
+    """
     Renders logout view
     """
     logout(request)
@@ -48,7 +48,7 @@ def logoutPage(request):
 
 
 def registerAccount(request):
-     """
+    """
     Registering new account
     """
     form = UserCreationForm()
@@ -67,7 +67,7 @@ def registerAccount(request):
 
 
 def homepage(request):
-     """
+    """
     Renders homepage view
     """
     q = request.GET.get('q') if request.GET.get('q') != None else ''
