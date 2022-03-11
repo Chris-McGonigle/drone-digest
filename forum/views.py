@@ -68,10 +68,10 @@ def homepage(request):
         Q(name__icontains=q) |
         Q(description__icontains=q)
     )
-    thread_total = threads.count()
     subjects = Topic.objects.all()
+    thread_total = threads.count()
 
-    comments = Thread.objects.all()
+    comments = Post.objects.all()
 
     context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total, 'comments': comments}    
     return render(request, 'home.html', context)

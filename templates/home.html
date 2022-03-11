@@ -71,9 +71,10 @@
         {% for comment in comments %}
 
         <div>
-            <small>{{comment.author}} {{comment.created|timesince}}</small>
-            
-            <small>{{post}}</small>
+            <p><small>{{comment.author}} {{comment.created|timesince}}</small></p>
+            <p><small>replied in "{{comment.thread}}"</small></p>
+            <p><small>{{comment}}</small></p>
+            <hr>
         </div>
 
         {% endfor %}
