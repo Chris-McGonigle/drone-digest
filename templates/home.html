@@ -34,27 +34,33 @@
         </div>
 
         <div id="thread-window">
+            
 
             <!--Loop to display threads-->
             {% for thread in threads %}
-                <div>
-                    <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
+                <div class="posts">
+
+                    <div class="post-title">
+                        <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
+                    </div>
+
+                    <div class="post-detail">
+                        <p>Author: {{thread.author}}</p>
+                        <p>Subject: {{thread.subject}}</p>
+                        <p>Created: {{thread.created}}</p>
+                        <br>
+                        <p>{{thread.description}}</p>
+                    </div>
+                
+
+                    <!--If statement to hide update and delete thread buttons if user is not thread author-->
+
+                    {% if request.user == thread.author %}
+                    <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
+                    <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
+                    {% endif %}
+
                 </div>
-
-                <div>
-                    <p>Author: {{thread.author}}</p>
-                    <p>Subject: {{thread.subject}}</p>
-                    <p>Created: {{thread.created}}</p>
-                    <br>
-                    <p>{{thread.description}}</p>
-                </div>
-
-                <!--If statement to hide update and delete thread buttons if user is not thread author-->
-
-                {% if request.user == thread.author %}
-                <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
-                <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
-                {% endif %}
                 
             {% endfor %}  
 

@@ -49,22 +49,46 @@ i {
     background-color: #e0cff4;
 }
 
-
-/* Homepge styling */ 
+/* Homepage styling */ 
 
 #homepage {
     padding-top: 100px;
+
 }
 
+#home-wrapper {
+    padding: 10px;
+}
 
 #subject-filter,
 #activity-thread {
     display: none;
 }
 
-/* Log In/Out Styling */
+.posts {
+    padding: 5px 0  5px 0;
+}
+
+/* Log In/Out Form Styling */
 
 .logon-out {
     display: block;
     padding-top: 100px;
 }
+
+
+
+/* Footer styling */
+
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    background-color:#b186e3;
