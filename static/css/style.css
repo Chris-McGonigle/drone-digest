@@ -1,4 +1,4 @@
-/* Core site styling */
+/* Core global site styling */
 
 * {
     box-sizing: border-box;
@@ -6,8 +6,11 @@
     margin: 0;
 }
 
-i {
-    color: black;
+button {
+   background-color: lightgreen;
+   border-radius: 25px;
+   height: 40px;
+   width: 150px;
 }
 
 /* Header styling */
@@ -56,13 +59,21 @@ i {
 
 }
 
-#home-wrapper {
+#home-wrapper,
+#thread-counter {
     padding: 10px;
 }
 
 #subject-filter,
 #activity-thread {
     display: none;
+}
+
+.mobile-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0 10px 0;
 }
 
 .posts {
@@ -75,7 +86,6 @@ i {
     display: block;
     padding-top: 100px;
 }
-
 
 
 /* Footer styling */
@@ -92,3 +102,4 @@ footer {
     align-items: center;
     padding: 10px 5px;
     background-color:#b186e3;
+}

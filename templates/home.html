@@ -3,14 +3,30 @@
 {% block content %}
 
 <div id="homepage">
+
+    <div class="mobile-buttons">
+        
+        <div class="subject-filter-btn">
+
+            <button type="button">Browse Subjects</button>
+
+        </div>
+
+        <div class="recent-activity-btn">
+
+            <button type="button">Recent Activity</button>
+
+        </div>
+
+    </div>
     
     <div class="create-thread"></div>
-        <a href="{% url 'new-thread' %}"><h2>Create Thread</h2></a>
+        <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
     </div>
     
     <!--Variable to display total number of threads-->
 
-    <div class="thread-counter">
+    <div id="thread-counter">
         <h3>{{thread_total}} open threads</h3>
     </div>    
 
