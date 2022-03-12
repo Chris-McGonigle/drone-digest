@@ -19,30 +19,37 @@
         </div>
 
     </div>
-    
-    <div class="create-thread"></div>
-        <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
-    </div>
-    
+
     <!--Variable to display total number of threads-->
 
-    <div id="thread-counter">
-        <h3>{{thread_total}} open threads</h3>
-    </div>    
+    <div class="thread-info">
+
+        <div id="thread-counter">
+            <h3>{{thread_total}} open threads</h3>
+        </div>
+
+        <!--Button to create new thread-->
+        
+        <div class="create-thread"></div>
+            <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
+        </div>
+    
+    </div>
+        
 
     <div id="home-wrapper">
 
         <!--Sidebar to filter threads by subject-->
 
-        <div id="subject-filter" class="d-none d-lg-block col-lg-3">
+        <div id="subject-filter">
             <h2>Filter by Subject</h2>
 
-            <div>
+            <div class="subject-filter">
                     <h3><a href="{% url 'homepage' %}">All</a></h3>
             </div>
 
             <!--Loop to display sujects-->
-            <div>
+            <div class="subject-filter">
                 {% for subject in subjects %}
                     <h3><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h3>
                 {% endfor %}
@@ -92,7 +99,7 @@
             
             {% for comment in comments %}
 
-            <div>
+            <div id="activity-details">
                 <p><small>{{comment.author}} {{comment.created|timesince}}</small></p>
                 <p><small>replied in "{{comment.thread}}"</small></p>
                 <p><small>{{comment}}</small></p>
