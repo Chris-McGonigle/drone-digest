@@ -4,38 +4,42 @@
 
 {% if page == 'signin'%}
 
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
+<div class="logon-out">
 
-        <label for="username">Username:</label>
-        <input type="text" name="username" placeholder="Enter your Username">
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="Enter your Password">
-    
-       <input type="submit" value="Log In">
+            <label for="username">Username:</label>
+            <input type="text" name="username" placeholder="Enter your Username">
 
-    </form>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your Password">
+        
+        <input type="submit" value="Log In">
 
-    <h3>Not yet a member?</h3>
-    <a href="{% url 'register' %}">Register an account</a>
-</div>
+        </form>
 
-{% else %}
+        <h3>Not yet a member?</h3>
+        <a href="{% url 'register' %}">Register an account</a>
+    </div>
 
-<div>
-    <form method="POST" action="">
-        {% csrf_token %}
+    {% else %}
 
-        {{form.as_p}}
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
 
-       <input type="submit" value="Register Account">
+            {{form.as_p}}
 
-    </form>
+        <input type="submit" value="Register Account">
 
-    <h3>Already a member?</h3>
-    <a href="{% url 'signin' %}">Log In</a>
+        </form>
+
+        <h3>Already a member?</h3>
+        <a href="{% url 'signin' %}">Log In</a>
+
+    </div>
 
 </div>
 

@@ -2,89 +2,84 @@
 
 {% block content %}
 
-<!--Temporary styling-->
-
-<style>
-    #home-wrapper {
-        display: grid;
-        grid-template-columns: 10% 70% 20%;
-    }
-</style>
-
-<h1>Homepage Template</h1>
-
-<a href="{% url 'new-thread' %}"><h2>Create Thread</h2></a>
-
-<!--Variable to display total number of threads-->
-
-<h3>{{thread_total}} open threads</h3>
-
-
-<div id="home-wrapper" class="container-fluid">
-
-    <!--Sidebar to filter threads by subject-->
-
-    <div id="subject-filter" class="d-none d-lg-block col-lg-3">
-        <h2>Filter by Subject</h2>
-
-        <div>
-                <h3><a href="{% url 'homepage' %}">All</a></h3>
-        </div>
-
-        <!--Loop to display sujects-->
-        <div>
-            {% for subject in subjects %}
-                <h3><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h3>
-            {% endfor %}
-        </div>
+<div id="homepage">
+    
+    <div class="create-thread"></div>
+        <a href="{% url 'new-thread' %}"><h2>Create Thread</h2></a>
     </div>
+    
+    <!--Variable to display total number of threads-->
 
-    <div id="thread-window" class="col-sm-12 col-md-9 col-lg-6">
+    <div class="thread-counter">
+        <h3>{{thread_total}} open threads</h3>
+    </div>    
 
-        <!--Loop to display threads-->
-        {% for thread in threads %}
+    <div id="home-wrapper">
+
+        <!--Sidebar to filter threads by subject-->
+
+        <div id="subject-filter" class="d-none d-lg-block col-lg-3">
+            <h2>Filter by Subject</h2>
+
             <div>
-                <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
+                    <h3><a href="{% url 'homepage' %}">All</a></h3>
             </div>
 
+            <!--Loop to display sujects-->
             <div>
-                <p>Author: {{thread.author}}</p>
-                <p>Subject: {{thread.subject}}</p>
-                <p>Created: {{thread.created}}</p>
-                <br>
-                <p>{{thread.description}}</p>
+                {% for subject in subjects %}
+                    <h3><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h3>
+                {% endfor %}
             </div>
-
-            <!--If statement to hide update and delete thread buttons if user is not thread author-->
-
-            {% if request.user == thread.author %}
-            <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
-            <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
-            {% endif %}
-            
-        {% endfor %}  
-
-    </div> 
-
-    <!--Displays recent forum activity-->
-
-    <div id="activity" class="d-none d-lg-block col-lg-3">
-
-        <h2>Recent Activity</h2>
-        <hr>
-
-        
-        {% for comment in comments %}
-
-        <div>
-            <p><small>{{comment.author}} {{comment.created|timesince}}</small></p>
-            <p><small>replied in "{{comment.thread}}"</small></p>
-            <p><small>{{comment}}</small></p>
-            <hr>
         </div>
 
-        {% endfor %}
+        <div id="thread-window">
 
+            <!--Loop to display threads-->
+            {% for thread in threads %}
+                <div>
+                    <h2><a href="/threads/{{thread.id}}">{{thread.name}}</a></h2>
+                </div>
+
+                <div>
+                    <p>Author: {{thread.author}}</p>
+                    <p>Subject: {{thread.subject}}</p>
+                    <p>Created: {{thread.created}}</p>
+                    <br>
+                    <p>{{thread.description}}</p>
+                </div>
+
+                <!--If statement to hide update and delete thread buttons if user is not thread author-->
+
+                {% if request.user == thread.author %}
+                <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
+                <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
+                {% endif %}
+                
+            {% endfor %}  
+
+        </div> 
+
+        <!--Displays recent forum activity-->
+
+        <div id="activity-thread">
+
+            <h2>Recent Activity</h2>
+            <hr>
+
+            
+            {% for comment in comments %}
+
+            <div>
+                <p><small>{{comment.author}} {{comment.created|timesince}}</small></p>
+                <p><small>replied in "{{comment.thread}}"</small></p>
+                <p><small>{{comment}}</small></p>
+                <hr>
+            </div>
+
+            {% endfor %}
+
+        </div>
     </div>
 </div>     
 
