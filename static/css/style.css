@@ -84,7 +84,7 @@ button {
     padding: 10px 0 10px 0;
 }
 
-.mobile-buttons {
+.buttons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -133,7 +133,7 @@ footer {
 
 @media screen and (min-width: 900px) {
 
-    .mobile-buttons {
+    .subject-filter-btn {
         display: none;
     }
 
@@ -148,10 +148,6 @@ footer {
         flex-direction: column;
         flex-wrap: wrap;
         width: max-content;
-    }
-
-    .close-button {
-        display: none;
     }
 
     .subject-filter h3 {

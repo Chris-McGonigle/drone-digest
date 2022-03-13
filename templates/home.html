@@ -4,11 +4,19 @@
 
 <div id="homepage">
 
-    <div class="mobile-buttons">
+    <div class="buttons">
         
         <div class="subject-filter-btn">
 
             <button type="button" id="mobile-browse-btn" onclick="openBrowse()">Browse Subjects</button>
+
+        </div>
+
+         <!--Button to create new thread-->
+        
+        <div class="create-thread">
+
+            <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
 
         </div>
 
@@ -20,12 +28,6 @@
 
         <div id="thread-counter">
             <h3>{{thread_total}} open threads</h3>
-        </div>
-
-        <!--Button to create new thread-->
-        
-        <div class="create-thread"></div>
-            <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
         </div>
     
     </div>
