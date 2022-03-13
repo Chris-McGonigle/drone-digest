@@ -80,7 +80,7 @@ button {
 #activity-header {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
     padding: 10px 0 10px 0;
 }
 
