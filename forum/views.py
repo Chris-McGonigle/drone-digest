@@ -76,7 +76,7 @@ def homepage(request):
         Q(name__icontains=q) |
         Q(description__icontains=q)
     )
-    subjects = Topic.objects.all()
+    subjects = Topic.objects.all().order_by("subject")
     thread_total = threads.count()
 
     comments = Post.objects.filter().order_by('-id')[:10]
