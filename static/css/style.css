@@ -159,6 +159,17 @@ label {
     justify-content: center
 }
 
+#already-reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:20 px;
+}
+
+#already-reg h3 {
+    padding: 20px;
+}
+
 
 /* Footer styling */
 
