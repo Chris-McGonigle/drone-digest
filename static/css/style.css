@@ -135,11 +135,24 @@ label {
     padding: 10px;
 }
 
-.login-btn {
+.login-btn,
+.reg-btn {
     margin: 10px;
     height: 30px;
-    width: 50px;
     border-radius: 5px;    
+}
+
+.login-btn {
+    width: 50px;
+}
+
+.reg-btn {
+    width: 150px;
+}
+
+#reg-btn {
+    display: flex;
+    justify-content: center;
 }
 
 #register {
@@ -159,6 +172,7 @@ label {
     justify-content: center
 }
 
+#not-reg,
 #already-reg {
     display: flex;
     flex-direction: column;
@@ -166,6 +180,7 @@ label {
     margin:20 px;
 }
 
+#not-reg h3,
 #already-reg h3 {
     padding: 20px;
 }

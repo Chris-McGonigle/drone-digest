@@ -21,7 +21,7 @@
 
         </form>
 
-        <div id="already-reg">
+        <div id="not-reg">
             <h3>Not yet a member?</h3>
             <a href="{% url 'register' %}">Register an account</a>
         </div>
@@ -36,12 +36,19 @@
 
             {{form.as_p}}
 
-        <input type="submit" value="Register Account">
+            <div id="reg-btn">
+        
+                <input class="reg-btn" type="submit" value="Register Account">
 
+            </div>        
         </form>
 
-        <h3>Already a member?</h3>
-        <a href="{% url 'signin' %}">Log In</a>
+        <div id="already-reg">
+
+            <h3>Already a member?</h3>
+            <a href="{% url 'signin' %}">Log In</a>
+
+        </div>
 
     </div>
 
