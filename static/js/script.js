@@ -30,26 +30,3 @@ function closeBrowse() {
     close.style.display = 'none'
 }
 
-/*
- * Function to open Recent Activity
- * links on mobile devices
- */
-
-
-function openActivity() {
-    let activity = document.getElementById("activity-thread");
-    activity.style.display = 'flex';
-    activity.style.flexDirection = 'column';
-    activity.style.flexWrap = 'nowrap';
-    activity.style.height = '80%'
-    activity.style.width = '80%';
-    activity.style.position = 'fixed';
-    activity.style.backgroundColor = 'blue';
-    activity.style.alignContent = 'center';
-    activity.style.left = '50%';
-    activity.style.top = '50%';
-    activity.style.transform = 'translate(-50%, -50%)';
-    activity.style.zIndex = '10';
-    console.log("test");
-    }
-

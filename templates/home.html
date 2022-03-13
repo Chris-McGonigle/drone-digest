@@ -12,12 +12,6 @@
 
         </div>
 
-        <div class="recent-activity-btn">
-
-            <button type="button" id="mobile-activity-btn" onclick="openActivity()">Recent Activity</button>
-
-        </div>
-
     </div>
 
     <!--Variable to display total number of threads-->
@@ -93,8 +87,12 @@
 
         <div id="activity-thread">
 
-            <h2>Recent Activity</h2>
-            <hr>
+            
+            <div id="activity-header">
+                <div>
+                    <h2>Recent Activity</h2>
+                    <hr>
+                </div>
 
             
             {% for comment in comments %}
@@ -110,6 +108,8 @@
 
         </div>
     </div>
-</div>     
+</div>
 
 {% endblock %}
+
+<script src="https://kit.fontawesome.com/bc577d1dcb.js" crossorigin="anonymous"></script>
