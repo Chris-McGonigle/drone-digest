@@ -79,7 +79,7 @@ def homepage(request):
     subjects = Topic.objects.all()
     thread_total = threads.count()
 
-    comments = Post.objects.all()
+    comments = Post.objects.filter().order_by('-id')[:10]
 
     context = {'threads': threads, 'subjects': subjects, 'thread_total': thread_total, 'comments': comments}    
     return render(request, 'home.html', context)
