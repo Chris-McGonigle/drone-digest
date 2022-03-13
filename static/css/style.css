@@ -60,12 +60,15 @@ button {
     background-color: #e0cff4;
 }
 
-/* Homepage styling */ 
+/* Shared Home & Thread page styling */ 
 
-#homepage {
+#homepage,
+#open-threads {
     padding-top: 100px;
 
 }
+
+/* Homepage styling */
 
 #home-wrapper,
 #thread-counter {
@@ -103,6 +106,52 @@ button {
 .posts {
     padding: 5px 0  5px 0;
 }
+
+/* Thread Window styling */
+
+#open-threads {
+    display: flex;
+    flex-direction: column;
+}
+
+.thread-container,
+.droners {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px 5px 10px;
+}
+
+.thread-details {
+    padding-bottom: 10px;
+}
+
+.thread-details h1 {
+    padding-bottom: 5px;
+}
+
+.comment-input {
+    background-color: #fafafa;
+    border:0;
+    box-shadow:0 0 4px rgba(0,0,0,0.3);
+    transition: .3s box-shadow;
+    padding: 10px;
+    width: 100%;
+}
+
+#post-list {
+    padding-top: 10px;
+}
+
+#comment-details {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#comment-author,
+#comment-body {
+    padding-bottom: 5px;
+}
+
 
 /* Log In/Out Form Styling */
 
@@ -202,6 +251,22 @@ footer {
     background-color:#b186e3;
 }
 
+/* Media Queries  - Screens over 800 px wide */
+
+@media screen and (min-width: 800px) {
+
+    #open-threads {
+        flex-direction: row;
+    }
+
+    .thread-container {
+        padding-left: 20px;
+    }
+
+    .droners {
+        padding-right: 20px;
+    }
+
 
 /* Media Queries  - Screens over 900 px wide */
 
@@ -240,4 +305,4 @@ footer {
         padding-bottom: 5px;
     }
 
-}
+};

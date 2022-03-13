@@ -2,14 +2,6 @@
 
 {% block content %}
 
-<!--Temporary styling-->
-
-<style>
-    #open-threads {
-        display: grid;
-        grid-template-columns: 80% 20%;
-    }
-</style>
 
 <div id="open-threads">
 
@@ -27,42 +19,60 @@
 
         </div>
 
+        <!--Post comment input field only appears if user logged on-->
+        
+        <div id="comment-input">
+
+            {% if request.user.is_authenticated %}
+
+            <div id="make-post">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input class="comment-input" type="text" name="post-body" placeholder="Join the conversation here">
+                </form>
+            </div>
+
+        </div>
+
         <div id="post-list">
 
-            <h2>Comments</h2>
-            <br>
+            <div id="comment-header">  
+
+                <h2>Comments</h2>
+
+            </div>
+            
 
             <!--Loop to display all comments made under each thread-->
 
             {% for comment in comments %}
 
-            <div>
-                {% if request.user == comment.author %}
-                <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
-                {% endif %}
+            <div id="comment-details">
+            
+                <div id="comment-author">
 
-                {{comment.author}} {{comment.created|timesince}} ago
+                    {{comment.author}} {{comment.created|timesince}} ago
+                    
+                </div>
+
+                <div id="comment-body">
+                    {{comment.body}}
+                </div>
                 
+                <div id="delete-comment">
+                    {% if request.user == comment.author %}
+                    <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
+                    {% endif %}
+
+                </div>
+
+            
             </div>
-            <br>
-            <div>
-                {{comment.body}}
-            </div>
-            <br>
 
             {% endfor %}
         </div>
 
-        <!--Post comment input field only appears if user logged on-->
-
-        {% if request.user.is_authenticated %}
-
-        <div id="make-post">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <input type="text" name="post-body" placeholder="Join the conversation here">
-            </form>
-        </div>
+        
 
         {% endif %}
 
