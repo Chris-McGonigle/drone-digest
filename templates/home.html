@@ -8,7 +8,7 @@
         
         <div class="subject-filter-btn">
 
-            <button type="button">Browse Subjects</button>
+            <button type="button" id="mobile-browse-btn" onclick="openBrowse()">Browse Subjects</button>
 
         </div>
 
@@ -42,7 +42,7 @@
         <!--Sidebar to filter threads by subject-->
 
         <div id="subject-filter">
-            <h2>Filter by Subject</h2>
+            <h2 class="subject-filter">Filter by Subject</h2>
 
             <div class="subject-filter">
                     <h3><a href="{% url 'homepage' %}">All</a></h3>
