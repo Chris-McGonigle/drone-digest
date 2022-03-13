@@ -6,17 +6,18 @@
 
 <div class="logon-out">
 
-    <div>
-        <form method="POST" action="">
+    <div id="logon">
+        
+        <form id="logform" method="POST" action="">
             {% csrf_token %}
 
             <label for="username">Username:</label>
-            <input type="text" name="username" placeholder="Enter your Username">
+            <input class="form-input" type="text" name="username" placeholder="Enter your Username">
 
             <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Enter your Password">
+            <input class="form-input" type="password" name="password" placeholder="Enter your Password">
         
-        <input type="submit" value="Log In">
+        <input class="login-btn" type="submit" value="Log In">
 
         </form>
 
@@ -26,7 +27,7 @@
 
     {% else %}
 
-    <div>
+    <div id="register">
         <form method="POST" action="">
             {% csrf_token %}
 
