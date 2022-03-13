@@ -1,5 +1,5 @@
 /*
- * Functions to open Browse subject
+ * Function to open Browse Subject
  * links on mobile devices
  */
 
@@ -20,3 +20,12 @@ function openBrowse() {
     }
 
 
+/*
+ * Function to close Browse Subject
+ * window when option selected
+ */
+
+function closeBrowse() {
+    let close = document.getElementById("subject-filter");
+    close.style.display = 'none'
+}
