@@ -10,7 +10,7 @@ function openBrowse() {
     browse.style.display = 'flex';
     browse.style.flexDirection = 'column';
     browse.style.flexWrap = 'wrap';
-    browse.style.width = '80%';
+    browse.style.width = '60%';
     browse.style.position = 'fixed';
     browse.style.backgroundColor = '#364958';
     browse.style.alignContent = 'center';

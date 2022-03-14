@@ -25,12 +25,14 @@
 
             {% if request.user.is_authenticated %}
 
-            <div id="make-post">
-                <form method="POST" action="">
-                    {% csrf_token %}
-                    <input class="comment-input" type="text" name="post-body" placeholder="Join the conversation here">
-                </form>
-            </div>
+                <div id="make-post">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <input class="comment-input" type="text" name="post-body" placeholder="Join the conversation here">
+                    </form>
+                </div>
+
+            {% endif %}
 
         </div>
 
@@ -47,37 +49,34 @@
 
             {% for comment in comments %}
 
-            <div id="comment-details">
-            
-                <div id="comment-author">
+                <div id="comment-details">
+                
+                    <div id="comment-author">
 
-                    {{comment.author}} - {{comment.created|timesince}} ago
-                    
+                        {{comment.author}} - {{comment.created|timesince}} ago
+                        
+                    </div>
+
+                    <div id="comment-body">
+                        {{comment.body}}
+                    </div>
+
+                    <div id="delete-comment">
+
+                        {% if request.user == comment.author %}
+                        <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
+                        {% endif %}
+
+                    </div>
+
+                    <hr>
+
+                
                 </div>
-
-                <div id="comment-body">
-                    {{comment.body}}
-                </div>
-
-                <div id="delete-comment">
-
-                    {% if request.user == comment.author %}
-                    <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
-                    {% endif %}
-
-                </div>
-
-                <hr>
-
-            
-            </div>
 
             {% endfor %}
         </div>
 
-        
-
-        {% endif %}
 
     </div>
 

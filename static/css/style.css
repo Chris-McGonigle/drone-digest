@@ -216,6 +216,7 @@ button {
     display: block;
     padding-top: 100px;
     height: 100vh;
+    background-color: #55828B;
 
 }
 
@@ -245,7 +246,10 @@ label {
 .reg-btn {
     margin: 10px;
     height: 30px;
-    border-radius: 5px;    
+    width: 75px;
+    border-radius: 5px;
+    background-color: black;
+    color: #ff5400;    
 }
 
 .login-btn {
@@ -258,8 +262,9 @@ label {
     flex-direction: column;
     width: 50%;
     height: 250px;
-    border: 1px solid black;
+    border: 2px solid #ff5400;
     border-radius: 5px;
+    box-shadow:0 0 10px rgba(255,84,0,0.5);
     align-items: center;
     margin:auto;
     justify-content: center
@@ -300,6 +305,10 @@ label {
 #not-reg h3,
 #already-reg h3 {
     padding: 20px;
+}
+
+#not-reg a:hover {
+    color: #ff5400;
 }
 
 /* Create Thread styling */
