@@ -195,11 +195,12 @@ label {
     width: 50px;
 }
 
-#logform {
+#logform,
+#regform {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 300px;
+    width: 50%;
+    height: 250px;
     border: 1px solid black;
     border-radius: 5px;
     align-items: center;
