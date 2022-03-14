@@ -31,17 +31,33 @@
     {% else %}
 
     <div id="register">
-        <form method="POST" action="">
-            {% csrf_token %}
 
-            {{form.as_p}}
+        <div id="register-form">
 
-            <div id="reg-btn">
-        
-                <input class="reg-btn" type="submit" value="Register Account">
+            <form method="POST" action="">
 
-            </div>        
-        </form>
+                {% csrf_token %}
+
+                <div class="register-input-group"> 
+                    {{form.username}} 
+                </div> 
+
+                <div class="register-input-group"> 
+                    {{form.password1}} 
+                </div> 
+
+                <div class="register-input-group"> 
+                    {{form.password2}} 
+                </div> 
+
+                <div id="reg-btn">
+            
+                    <input class="reg-btn" type="submit" value="Register Account">
+
+                </div>        
+            </form>
+
+        </div>
 
         <div id="already-reg">
 
