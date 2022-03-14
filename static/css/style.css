@@ -247,8 +247,17 @@ label {
 
 /* Create Thread styling */
 
-#new-thread {
+#create-thread {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#new-thread {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -337,7 +346,6 @@ footer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: max-content;
     }
 
     .subject-filter h3 {

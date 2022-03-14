@@ -2,13 +2,17 @@
 
 {% block content %}
 
-<div id="new-thread">
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit">
+<div id="create-thread">
 
-    </form>
+    <div id="new-thread">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    
 </div>
 
 {% endblock %}
