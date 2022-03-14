@@ -5,14 +5,41 @@
 <div id="create-thread">
 
     <div id="new-thread">
+
         <form method="POST" action="">
             {% csrf_token %}
-            {{form.as_p}}
+
+        <div id="thread-subject" class="create-input-group">    
+           
+            <p>Select a subject:</p>
+            <p>{{form.subject}}</p>
+
+        </div>    
+
+        <div id="thread-subject" class="create-input-group">    
+           
+            <p>Thread Title:</p>
+            <p>{{form.name}}</p>
+
+        </div>
+
+        <div id="thread-subject" class="create-input-group">    
+           
+            <p>Thread Description:</p>
+            <p>{{form.description}}</p>
+
+        </div>
+
+        <div class="create-submit">
+
             <input type="submit" value="Submit">
 
+        </div>
+
         </form>
+
     </div>
-    
+
 </div>
 
 {% endblock %}

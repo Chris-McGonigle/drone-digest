@@ -8,5 +8,5 @@ class ThreadForm(ModelForm):
     """
     class Meta:
         model = Thread
-        fields = '__all__'
+        fields = ['subject', 'name', 'description']
         

@@ -114,6 +114,8 @@ def newThread(request):
     if request.method == "POST":
         form = ThreadForm(request.POST)
         if form.is_valid():
+            form = form.save(commit=False)
+            form.author = request.user
             form.save()
             return redirect('homepage')
     context = {'form': form}
