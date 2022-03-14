@@ -344,6 +344,15 @@ label {
     color: black;
 }
 
+.create-submit input {
+    margin: 10px;
+    height: 30px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: black;
+    color: #ff5400; 
+}
+
 /* Delete Confirmation styling */
 
 #delete-confirm {
