@@ -108,7 +108,7 @@ button {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    padding: 10px 0 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .buttons {
@@ -400,6 +400,15 @@ footer {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    #subject-filter,
+    #activity-thread {
+        padding: 5px;
+        border: 2px solid #ff5400;
+        border-radius: 5px;
+        box-shadow:0 0 10px rgba(255,84,0,0.5);
+        height: fit-content;
     }
 
     .subject-filter h3 {
