@@ -2,20 +2,20 @@
 
 {% block content %}
 
-<div id="delete-thread">
-
     <div id="delete-confirm">
 
-        <form method="POST" action="">
-            {% csrf_token %}
-            <h2>Are you sure you want to delete "{{obj}}"?</h2>
-            <a href="{{request.META.HTTP_REFERER}}">No, Go Back!</a>
-            <input type="submit" value="Yes, I'm sure!">
+        <div class="delete-holder">
 
-        </form>
+            <form id="form-delete" method="POST" action="">
+                {% csrf_token %}
+                <h2>Are you sure you want to delete "{{obj}}"?</h2>
+                <a href="{{request.META.HTTP_REFERER}}">No, Go Back!</a>
+                <input type="submit" value="Yes, I'm sure!">
+
+            </form>
+
+        </div>    
     
     </div>
-
-</div>
 
 {% endblock %}
