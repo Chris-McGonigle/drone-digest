@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'forum',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

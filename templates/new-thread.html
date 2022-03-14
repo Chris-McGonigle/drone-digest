@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load widget_tweaks %}
+
 {% block content %}
 
 <div id="create-thread">
@@ -13,20 +15,21 @@
            
             <p>Select a subject:</p>
             <p>{{form.subject}}</p>
+            <p>{% render_field form.subject class="formsubject" %}</p>
 
         </div>    
 
-        <div id="thread-subject" class="create-input-group">    
+        <div id="thread-title" class="create-input-group">    
            
             <p>Thread Title:</p>
-            <p>{{form.name}}</p>
+            <p>{% render_field form.name class="formtitle" %}</p>
 
         </div>
 
-        <div id="thread-subject" class="create-input-group">    
+        <div id="thread-description" class="create-input-group">    
            
             <p>Thread Description:</p>
-            <p>{{form.description}}</p>
+            <p>{% render_field form.description class="formdescription" %}</p>
 
         </div>
 

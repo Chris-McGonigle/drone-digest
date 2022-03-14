@@ -286,6 +286,7 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #55828B;
 }
 
 .register-input-group {
@@ -307,7 +308,8 @@ label {
     padding: 20px;
 }
 
-#not-reg a:hover {
+#not-reg a:hover,
+#already-reg a:hover {
     color: #ff5400;
 }
 
@@ -318,6 +320,7 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #55828B;
 }
 
 #new-thread {
@@ -329,6 +332,16 @@ label {
 
 .create-input-group {
     padding: 5px;
+}
+
+.formsubject {
+    color: #ff5400;
+}
+
+.formtitle,
+.formdescription,
+.formsubject {
+    color: black;
 }
 
 /* Delete Confirmation styling */
