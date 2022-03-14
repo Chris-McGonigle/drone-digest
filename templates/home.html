@@ -16,7 +16,7 @@
         
         <div class="create-thread">
 
-            <a href="{% url 'new-thread' %}"><button type="button">Create Thread</button></a>
+            <a href="{% url 'new-thread' %}"><button type="button">CREATE THREAD</button></a>
 
         </div>
 
@@ -39,15 +39,16 @@
 
         <div id="subject-filter">
             <h2 class="subject-filter">Filter by Subject</h2>
+            <hr>
 
             <div class="subject-filter">
-                    <h3><a href="{% url 'homepage' %}">All</a></h3>
+                    <h4><a href="{% url 'homepage' %}">All</a></h4>
             </div>
 
             <!--Loop to display sujects-->
             <div class="subject-filter">
                 {% for subject in subjects %}
-                    <h3 id="subjectbtn" onclick="closeBrowse()"><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h3>
+                    <h4 id="subjectbtn" onclick="closeBrowse()"><a href="{% url 'homepage' %}?q={{subject.subject}}">{{subject.subject}}</a></h4>
                 {% endfor %}
             </div>
         </div>
@@ -75,8 +76,8 @@
                     <!--If statement to hide update and delete thread buttons if user is not thread author-->
 
                     {% if request.user == thread.author %}
-                    <div><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
-                    <div><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
+                    <div class="thread-option"><a href="{% url 'update-thread' thread.id %}">Edit Thread</a></div>
+                    <div class="thread-option"><a href="{% url 'delete-thread' thread.id %}">Delete Thread</a></div>
                     {% endif %}
 
                 </div>
@@ -100,7 +101,7 @@
             {% for comment in comments %}
 
             <div id="activity-details">
-                <p><small>{{comment.author}} {{comment.created|timesince}}</small></p>
+                <p><small>{{comment.author}} - {{comment.created|timesince}} ago</small></p>
                 <p><small>replied in "{{comment.thread}}"</small></p>
                 <p><small>{{comment}}</small></p>
                 <hr>

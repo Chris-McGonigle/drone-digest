@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 /* Core global site styling */
 
@@ -6,19 +6,33 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Source-Sans-Pro, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #C9E4CA;
+    
 }
 
 header,
-body,
 footer {
-    font-family: Fredoka, sans-serif;
+    background-color: #364958;
 }
 
+
 button {
-   background-color: lightgreen;
+   background-color: #ff5400;
+   font-family: Source-Sans-Pro, sans-serif;
+   font-weight: 600;
    border-radius: 25px;
    height: 40px;
    width: 150px;
+}
+
+::placeholder {
+    color: #C9E4CA;
+    font-family: Source-Sans-Pro, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 /* Header styling */
@@ -29,11 +43,11 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: 100px;
+    height: 110px;
     justify-content: center;
     align-items: center;
     padding: 10px 5px;
-    background-color:#b186e3;
+    background-color: #364958;
 
 }
 
@@ -50,22 +64,23 @@ button {
 
 .search-bar {
     margin: 5px;
-    width: 80%;
+    width: 60%;
+    color: #C9E4CA;
 }
 
 #search {
     width: 100%;
     height: 35px;
-    border-radius: 25px;
-    background-color: #e0cff4;
+    border-radius: 10px;
+    background-color: #55828B;
 }
 
 /* Shared Home & Thread page styling */ 
 
 #homepage,
 #open-threads {
-    padding-top: 100px;
-
+    padding-top: 110px;
+    background-color: #55828B;
 }
 
 /* Homepage styling */
@@ -75,9 +90,18 @@ button {
     padding: 10px 10px 10px 20px;
 }
 
+
 #subject-filter,
 #activity-thread {
     display: none;
+}
+
+.subject-filter h4 {
+    padding: 10px 0 10px 0;
+}
+
+.subject-filter a:hover {
+    color: black;
 }
 
 #activity-header {
@@ -103,8 +127,34 @@ button {
     justify-content: center;
 }
 
+#thread-window {
+    margin-left: 5px;
+}
+
 .posts {
     padding: 5px 0  5px 0;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #ff5400;
+}
+
+.post-title a:hover {
+    color: black;
+}
+
+.post-detail,
+.thread-option {
+    margin-left: 10px;
+}
+
+.thread-option a {
+    color: black;
+}
+
+.thread-option a:hover {
+    color: #ff5400;
 }
 
 /* Thread Window styling */
@@ -112,6 +162,7 @@ button {
 #open-threads {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 .thread-container,
@@ -311,7 +362,6 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px 5px;
-    background-color:#b186e3;
 }
 
 /* Media Queries  - Screens over 800 px wide */
