@@ -48,7 +48,6 @@ button {
     align-items: center;
     padding: 10px 5px;
     background-color: #364958;
-
 }
 
 #logo {
@@ -89,7 +88,6 @@ button {
 #thread-counter {
     padding: 10px 10px 10px 20px;
 }
-
 
 #subject-filter,
 #activity-thread {
@@ -162,7 +160,6 @@ button {
 #open-threads {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .thread-container,
@@ -178,6 +175,12 @@ button {
 
 .thread-details h1 {
     padding-bottom: 5px;
+    color: #ff5400;
+}
+
+#comment-header h2,
+.droners h2 {
+    color: #ff5400;
 }
 
 .comment-input {
@@ -203,6 +206,9 @@ button {
     padding-bottom: 5px;
 }
 
+#delete-comment a {
+    color: black;
+}
 
 /* Log In/Out Form Styling */
 

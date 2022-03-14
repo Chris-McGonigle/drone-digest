@@ -51,20 +51,23 @@
             
                 <div id="comment-author">
 
-                    {{comment.author}} {{comment.created|timesince}} ago
+                    {{comment.author}} - {{comment.created|timesince}} ago
                     
                 </div>
 
                 <div id="comment-body">
                     {{comment.body}}
                 </div>
-                
+
                 <div id="delete-comment">
+
                     {% if request.user == comment.author %}
                     <a href="{% url 'delete-comment' comment.id %}">Delete Comment</a>
                     {% endif %}
 
                 </div>
+
+                <hr>
 
             
             </div>
