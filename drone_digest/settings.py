@@ -67,6 +67,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "drone_digest.wsgi.application"
 
+CKEDITOR_CONFIGS = {
+'default': {
+    'width': 'auto',
+
+          },
+    }
+
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

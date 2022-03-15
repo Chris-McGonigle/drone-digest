@@ -347,6 +347,7 @@ label {
     flex-direction: column;
     justify-content: center;
     background-color: #55828B;
+    padding-top: 40px;
 }
 
 #new-thread {
@@ -375,6 +376,7 @@ label {
 
 select option {
     color: black;
+    padding-top: 10px;
 }
 
 .create-submit input {
