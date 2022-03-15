@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "cloudinary",
     "forum",
     "ckeditor",
+    "ckeditor_uploader",
     "widget_tweaks",
 ]
 
@@ -129,6 +130,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "/media/"
 
 
 # Default primary key field type

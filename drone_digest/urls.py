@@ -15,4 +15,5 @@ urlpatterns = [
     path(
         "delete-comment/<str:pk>", views.deleteComment, name="delete-comment"
     ),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
