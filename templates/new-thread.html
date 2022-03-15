@@ -28,7 +28,8 @@
         <div id="thread-description" class="create-input-group">    
            
             <p>Thread Description:</p>
-            <p>{% render_field form.description class="formdescription" %}</p>
+            {{ form.media }}
+            {{ form.description }}
 
         </div>
 

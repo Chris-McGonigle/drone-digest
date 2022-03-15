@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cloudinary",
     "forum",
+    "ckeditor",
     "widget_tweaks",
 ]
 
