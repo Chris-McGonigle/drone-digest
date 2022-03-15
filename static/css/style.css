@@ -207,6 +207,11 @@ button {
     transition: .3s box-shadow;
     padding: 10px;
     width: 100%;
+    color: black;
+}
+
+input[class^="comment-input"]::placeholder {
+    color: black;
 }
 
 #post-list {
@@ -351,13 +356,13 @@ label {
     padding: 5px;
 }
 
-.formsubject {
-    color: #ff5400;
-}
-
 .formtitle,
 .formdescription,
 .formsubject {
+    color: black;
+}
+
+select option {
     color: black;
 }
 
@@ -368,6 +373,10 @@ label {
     border-radius: 5px;
     background-color: black;
     color: #ff5400; 
+}
+
+input[class^="formsubject"] {
+    color: black;
 }
 
 /* Delete Confirmation styling */
