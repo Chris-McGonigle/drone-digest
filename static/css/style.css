@@ -362,6 +362,13 @@ label {
     color: black;
 }
 
+.formsubject {
+    height: 30px;
+}
+.formtitle {
+    width: 300px;
+}
+
 select option {
     color: black;
 }
