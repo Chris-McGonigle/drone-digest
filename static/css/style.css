@@ -417,14 +417,23 @@ label {
 footer {
     position: sticky;
     bottom: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
     height: 75px;
-    justify-content: center;
-    align-items: center;
     padding: 10px 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+
+.social-icons i:hover {
+    color: #ff5400;
+}
+
+.copyright {
+    text-align: center;
 }
 
 /* Media Queries  - Screens over 800 px wide */
