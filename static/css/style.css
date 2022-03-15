@@ -483,6 +483,25 @@ footer {
 
 }
 
+/* Media Query for smaller mobiles - Screens under 716 px wide */
+
+@media screen and (max-width: 716px) {
+
+    #navbar {
+        height: auto;
+    }
+
+    #homepage,
+    #open-threads {
+        padding-top: 175px;
+    }
+
+    #log-status {
+        width: 25%;
+    }
+
+}
+
 
 /* Media Queries  - Screens over 800 px wide */
 
