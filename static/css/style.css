@@ -381,6 +381,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #55828B;
 }
 
 #form-delete {
@@ -397,9 +398,17 @@ label {
     text-align: center;
 }
 
-#form-delete input,
 #form-delete a {
-    padding: 10px;
+    margin-top: 10px;
+}
+
+#form-delete input {
+    margin-top: 10px;
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: black;
+    color: #ff5400; 
 }
 
 
