@@ -20,6 +20,16 @@
 
                 </div>
 
+                <!--Header Search Bar-->
+
+                <div class="search-bar">
+
+                    <form action="{% url 'homepage' %}" method="GET">
+                        <input id="search" type="text" name="q" placeholder="Search forum...">
+                    </form>
+                
+                </div>
+
                 <!--If statement to display log in or log out button depending on authenticated state-->
 
                 <div id="log-status">
@@ -37,16 +47,7 @@
 
                 </div>
 
-                <!--Header Search Bar-->
-
-                <div class="search-bar">
-
-                    <form action="{% url 'homepage' %}" method="GET">
-                        <input id="search" type="text" name="q" placeholder="Search forum...">
-                    </form>
                 
-                </div>
-
             </div>
         </nav>
 
