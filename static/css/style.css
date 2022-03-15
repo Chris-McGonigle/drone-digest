@@ -402,6 +402,7 @@ input[class^="formsubject"] {
     justify-content: center;
     align-items: center;
     background-color: #55828B;
+    width: 100vw;
 }
 
 #form-delete {
