@@ -177,6 +177,10 @@ button {
     flex-direction: column;
 }
 
+.thread-container {
+    height: 100vh;
+}
+
 .thread-container,
 .droners {
     display: flex;
@@ -444,13 +448,19 @@ footer {
     font-size: 25px;
 }
 
-.social-icons i:hover {
+.social-icons i:hover,
+.copyright a:hover {
     color: #ff5400;
 }
 
 .copyright {
     text-align: center;
 }
+
+.copyright a {
+    text-decoration: none;
+}
+
 
 /* Media Queries  - Screens over 800 px wide */
 
