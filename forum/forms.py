@@ -9,4 +9,3 @@ class ThreadForm(ModelForm):
     class Meta:
         model = Thread
         fields = ['subject', 'name', 'description']
-        
