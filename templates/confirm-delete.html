@@ -10,7 +10,7 @@
                 {% csrf_token %}
                 <h2>Are you sure you want to delete "{{obj}}"?</h2>
                 <a href="{{request.META.HTTP_REFERER}}">No, Go Back!</a>
-                <input type="submit" value="Yes, I'm sure!">
+                <input type="submit" value="Yes, I'm sure!" onclick="openSuccessDelete()">
 
             </form>
 

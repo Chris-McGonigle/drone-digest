@@ -435,6 +435,45 @@ input[class^="formsubject"] {
     color: #ff5400; 
 }
 
+#success {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    background-color: #364958;
+    border: 2px solid #ff5400;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px
+}
+
+#create-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#create-success p,
+#delete-success p {
+    padding-bottom: 10px;
+}
+
+#delete-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
 
 /* Footer styling */
 
@@ -482,7 +521,7 @@ footer {
 
     #homepage,
     #open-threads {
-        padding-top: 100px;
+        padding-top: 125px;
     }
 
     #create-thread {
