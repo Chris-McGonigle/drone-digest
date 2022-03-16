@@ -26,7 +26,7 @@
             {% if request.user.is_authenticated %}
 
                 <div id="make-post">
-                    <form method="POST" action="">
+                    <form method="POST" action="/">
                         {% csrf_token %}
                         <input class="comment-input" type="text" name="post-body" placeholder="Join the conversation here">
                     </form>

@@ -42,8 +42,13 @@ All HTML pages were passed through for testing and the results are as follows:
 
  * Error four regarding form action was amended by using a "/". All other errors were caused by curly variable brackets so can be ignored.
 
+ 5. [signup-logon.html](/testing/testing-images/sign-up-html.png)
 
+ * Five errors were caused again due to curly brackets and were ignored. Errors 4 and 6 regarding form action were amended by using a "/". Errors 8 and 9 were amended by adding an ID attribute to both form controls. Test was reran and errors were gone. 
 
+ 6. [threads.html](/testing/testing-images/threads-html.png)
+
+ * The four errors found here were caused by curly brackets and could be ignored.
 
 
 <br>
