@@ -50,7 +50,6 @@ button {
 }
 
 #logo {
-    flex-grow: 1;
     padding-left: 5px;       
 }
 
@@ -509,6 +508,7 @@ footer {
 
     #navbar {
         height: auto;
+        justify-content: space-around;
     }
 
     .search-bar {
@@ -536,11 +536,6 @@ footer {
         height: auto;
         flex-wrap: nowrap;
         justify-content: space-around;
-    }
-
-    #logo {
-        flex-grow: 0;
-
     }
 
 
