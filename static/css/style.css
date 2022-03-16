@@ -140,10 +140,12 @@ button {
 
 #thread-window {
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 .posts {
     padding: 5px 0  5px 5px;
+    margin-bottom: 5px;
     border: 2px solid #ff5400;
     border-radius: 10px;
 }
