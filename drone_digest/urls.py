@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from forum import views
 
 urlpatterns = [
@@ -15,5 +15,5 @@ urlpatterns = [
     path(
         "delete-comment/<str:pk>", views.deleteComment, name="delete-comment"
     ),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path("ckeditor/", include('ckeditor_uploader.urls')),
 ]

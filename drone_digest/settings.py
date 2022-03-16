@@ -73,7 +73,6 @@ WSGI_APPLICATION = "drone_digest.wsgi.application"
 CKEDITOR_CONFIGS = {
     'default': {
         'width': 'auto',
-
             },
         }
 
