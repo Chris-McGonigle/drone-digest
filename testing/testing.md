@@ -24,7 +24,7 @@ To view testing images please click on each individual hyperlink. These files ca
 
 ### HTML
 
-All HTML pages were passed through for testing and the results are as follows:
+All HTML pages were passed through for testing via [W3C](https://validator.w3.org/) and the results are as follows:
 
 1. [base.html](/testing/testing-images/base-html.png)
 
@@ -36,7 +36,7 @@ All HTML pages were passed through for testing and the results are as follows:
 
 3. [home.html](/testing/testing-images/home-html.png)
  
- * Again the majority of errors were caused by curly variable braces. Errors 11 and 12 stating open elements were incorrect and had been closed correctly. Error five regarding the button however was fixed by using a snippet of javascript to set a href location on the button instead of using the <a> tag that had been wrapping the button. It was retested and passed validation.
+ * Again the majority of errors were caused by curly variable braces. Errors 11 and 12 stating open elements were incorrect and had been closed correctly. Error five regarding the button however was fixed by using a snippet of javascript to set a href location on the button instead of using the a tag that had been wrapping the button. It was retested and passed validation.
 
  4. [new-thread.html](/testing/testing-images/new-thread-html.png)
 
@@ -49,6 +49,26 @@ All HTML pages were passed through for testing and the results are as follows:
  6. [threads.html](/testing/testing-images/threads-html.png)
 
  * The four errors found here were caused by curly brackets and could be ignored.
+
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+### CSS
+
+The CSS was tested using [Jigsaw](https://jigsaw.w3.org/css-validator/).
+
+![CSS Results](/testing/testing-images/css.png)
+
+One error was found were there was a space between the digit and the px value. This was deleted, retested and passed. 
+
+
+
+
+
 
 
 <br>
