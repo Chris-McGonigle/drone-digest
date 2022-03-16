@@ -6,7 +6,7 @@
 
         <div class="delete-holder">
 
-            <form id="form-delete" method="POST" action="/">
+            <form id="form-delete" method="POST" action="">
                 {% csrf_token %}
                 <h2>Are you sure you want to delete "{{obj}}"?</h2>
                 <a href="{{request.META.HTTP_REFERER}}">No, Go Back!</a>

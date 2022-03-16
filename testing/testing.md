@@ -9,9 +9,9 @@ During the construction process, the Dev Tools functionality of Chrome was used 
  1. [Validator testing](#validator-testing)
     * [HTML](#html)
     * [CSS](#css)
-    * [Lighthouse](#lighthouse-testing)
-    * [Javascript](#javascript-testing)
-    * [Pep8](#pep8-testing)
+    * [Lighthouse](#lighthouse)
+    * [Javascript](#javascript)
+    * [Pep8](#pep8)
 2. [Manual testing](#manual-testing)
     * [Responsive testing](#responsive-testing)
     * [Element testing](#element-testing)
@@ -32,7 +32,7 @@ All HTML pages were passed through for testing via [W3C](https://validator.w3.or
 
 2. [confirm-delete.html](/testing/testing-images/confirm-delete-html.png)
 
-* Five errors were generated. Error four regarding form action was amended by using a "/". All other errors were caused by curly variable brackets so can be ignored.
+* Five errors were generated. Error four regarding form action was caused by a blank string. An attempt was made to fix using a "/" but this broke the file routing so was left untouched. All other errors were caused by curly variable brackets so can be ignored.
 
 3. [home.html](/testing/testing-images/home-html.png)
  
@@ -40,11 +40,11 @@ All HTML pages were passed through for testing via [W3C](https://validator.w3.or
 
  4. [new-thread.html](/testing/testing-images/new-thread-html.png)
 
- * Error four regarding form action was amended by using a "/". All other errors were caused by curly variable brackets so can be ignored.
+ * Error four regarding form action was caused by a blank string. An attempt was made to fix using a "/" but this broke the file routing so was left untouched.. All other errors were caused by curly variable brackets so can be ignored.
 
  5. [signup-logon.html](/testing/testing-images/sign-up-html.png)
 
- * Five errors were caused again due to curly brackets and were ignored. Errors 4 and 6 regarding form action were amended by using a "/". Errors 8 and 9 were amended by adding an ID attribute to both form controls. Test was reran and errors were gone. 
+ * Five errors were caused again due to curly brackets and were ignored. Errors 4 and 6 regarding form action were caused by a blank string. An attempt was made to fix using a "/" but this broke the file routing so was left untouched.. Errors 8 and 9 were amended by adding an ID attribute to both form controls. Test was reran and errors were gone. 
 
  6. [threads.html](/testing/testing-images/threads-html.png)
 
@@ -65,7 +65,27 @@ The CSS was tested using [Jigsaw](https://jigsaw.w3.org/css-validator/).
 
 One error was found were there was a space between the digit and the px value. This was deleted, retested and passed. 
 
+<br>
 
+[Back to top](#table-of-contents)
+
+<br>
+
+### Lighthouse
+
+The site was tested for accessibility, performance and best practise using Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) tool. The results were as follows:
+
+![Homepage](/testing/testing-images/homepage.JPG)
+
+![Log On/Register Pages](/testing/testing-images/logon.JPG)
+
+![Create Thread]()
+
+![Thread Window](/testing/testing-images/thread.JPG)
+
+![Confirm Delete](/testing/testing-images/confirm-delete-html.png)
+
+All tests were found to be within acceptable parameters.
 
 
 
