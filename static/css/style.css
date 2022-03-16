@@ -472,9 +472,15 @@ footer {
         height: auto;
     }
 
+    .search-bar {
+        display: flex;
+        order: 3;
+        width: 100%;
+    }
+
     #homepage,
     #open-threads {
-        padding-top: 150px;
+        padding-top: 100px;
     }
 
     #create-thread {
@@ -485,7 +491,7 @@ footer {
 
 /* Media Query for smaller mobiles - Screens under 716 px wide */
 
-@media screen and (max-width: 716px) {
+@media screen and  (min-width: 395px) and (max-width: 716px) {
 
     #navbar {
         height: auto;
