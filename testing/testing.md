@@ -34,7 +34,15 @@ All HTML pages were passed through for testing and the results are as follows:
 
 * Five errors were generated. Error four regarding form action was amended by using a "/". All other errors were caused by curly variable brackets so can be ignored.
 
-3. [home.html]()
+3. [home.html](/testing/testing-images/home-html.png)
+ 
+ * Again the majority of errors were caused by curly variable braces. Errors 11 and 12 stating open elements were incorrect and had been closed correctly. Error five regarding the button however was fixed by using a snippet of javascript to set a href location on the button instead of using the <a> tag that had been wrapping the button. It was retested and passed validation.
+
+ 4. [new-thread.html](/testing/testing-images/new-thread-html.png)
+
+ * Error four regarding form action was amended by using a "/". All other errors were caused by curly variable brackets so can be ignored.
+
+
 
 
 
