@@ -14,8 +14,8 @@ function openBrowse() {
     browse.style.position = 'fixed';
     browse.style.backgroundColor = '#364958';
     browse.style.alignContent = 'center';
-    browse.style.border = '2px solid #ff5400;'
-    browse.style.borderRadius = '25px'
+    browse.style.border = '2px solid #ff5400';
+    browse.style.borderRadius = '25px';
     browse.style.left = '50%';
     browse.style.top = '50%';
     browse.style.transform = 'translate(-50%, -50%)';
@@ -30,6 +30,6 @@ function openBrowse() {
 
 function closeBrowse() {
     let close = document.getElementById("subject-filter");
-    close.style.display = 'none'
+    close.style.display = 'none';
 }
 

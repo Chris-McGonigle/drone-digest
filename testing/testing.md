@@ -83,12 +83,9 @@ The site was tested for accessibility, performance and best practise using Googl
 
 ![Thread Window](/testing/testing-images/thread.JPG)
 
-![Confirm Delete](/testing/testing-images/confirm-delete-html.png)
+![Confirm Delete](/testing/testing-images/confirm.jpg)
 
 All tests were found to be within acceptable parameters.
-
-
-
 
 
 <br>
@@ -96,6 +93,20 @@ All tests were found to be within acceptable parameters.
 [Back to top](#table-of-contents)
 
 <br>
+
+### Javascript
+
+![JS Testing](/testing/testing-images/js.jpg)
+
+Three warnings were received for missing semi-colons. These were amended, retested and passed. The warning around 'let' was ignored.
+
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
 
 
 
