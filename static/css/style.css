@@ -143,7 +143,9 @@ button {
 }
 
 .posts {
-    padding: 5px 0  5px 0;
+    padding: 5px 0  5px 5px;
+    border: 2px solid #ff5400;
+    border-radius: 10px;
 }
 
 .post-title a {
