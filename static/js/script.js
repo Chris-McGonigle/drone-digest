@@ -34,28 +34,28 @@ function closeBrowse() {
 }
 
 
-/*
- * Functions to open and close CRUD
- * confirmation pop ups
- */
+// /*
+//  * Functions to open and close CRUD
+//  * confirmation pop ups
+//  */
 
-var confSuccess = document.getElementById("success");
-var confCreate = document.getElementById("create-success");
-var confDelete = document.getElementById("delete-success");
+// var confSuccess = document.getElementById("success");
+// var confCreate = document.getElementById("create-success");
+// var confDelete = document.getElementById("delete-success");
 
-function openSuccessCreate() {
-    confSuccess.style.display = 'flex';
-    confCreate.style.display = 'flex';
-}
+// function openSuccessCreate() {
+//     confSuccess.style.display = 'flex';
+//     confCreate.style.display = 'flex';
+// }
 
-function openSuccessDelete() {
-    confSuccess.style.display = 'flex';
-    confDelete.style.display = 'flex';
-}
+// function openSuccessDelete() {
+//     confSuccess.style.display = 'flex';
+//     confDelete.style.display = 'flex';
+// }
 
-function closeWindow() {
-    confSuccess.style.display = 'none';
-    confCreate.style.display = 'none';
-    confDelete.style.display = 'none';
-}
+// function closeWindow() {
+//     confSuccess.style.display = 'none';
+//     confCreate.style.display = 'none';
+//     confDelete.style.display = 'none';
+// }
 
