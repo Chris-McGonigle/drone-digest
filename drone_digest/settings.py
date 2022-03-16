@@ -16,7 +16,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "cloudinary",
     "forum",
-    "ckeditor",
-    "ckeditor_uploader",
     "widget_tweaks",
 ]
 
@@ -70,11 +68,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "drone_digest.wsgi.application"
 
-CKEDITOR_CONFIGS = {
-    'default': {
-        'width': 'auto',
-            },
-        }
 
 
 # Database
@@ -129,9 +122,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
-
-CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
-CKEDITOR_UPLOAD_PATH = "/media/"
 
 
 # Default primary key field type

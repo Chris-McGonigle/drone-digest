@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from ckeditor.fields import RichTextField
 
 
 class Topic(models.Model):
@@ -22,7 +21,7 @@ class Thread(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     subject = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=150)
-    description = RichTextField(blank=True, null=True)
+    description = (blank=True, null=True)
     droners = models.ManyToManyField(User, related_name="droners", blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
