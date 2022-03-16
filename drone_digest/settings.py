@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "cloudinary",
     "forum",
     "widget_tweaks",
+    "django_summernote",
 ]
 
 MIDDLEWARE = [
