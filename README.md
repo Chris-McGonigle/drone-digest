@@ -7,7 +7,7 @@ Drone Digest is a public chat forum style website aimed at both individuals and 
 ![Mobile View](/images/readme-images/images/mobile.png)
 
 
-Please note the [Am I responsive](http://ami.responsivedesign.is/#) website would not render a display due to X-Frame Origins being set as advised in project walkthroughs[link](http://ami.responsivedesign.is/#)
+Please note the [Am I responsive](http://ami.responsivedesign.is/#) website would not render a display due to X-Frame Origins being set as advised in project walkthroughs [link](/images/readme-images/images/responsive.JPG)
 
 The pace of change in the UAV market is extraordinary, with new regulations and equipment entering the market numerous times a year. The UAV market is predicted to be worth $63.6 billion by 2025 [*(Source)*](https://www.businessinsider.com/drone-industry-analysis-market-trends-growth-forecasts?r=US&IR=T) and will only get larger given technological advances in the use of drones for agriculture, construction and law enforcement to name but a few.
 
