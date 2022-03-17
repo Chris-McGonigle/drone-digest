@@ -346,6 +346,26 @@ The site folder holds social media links and a link to the developers Github, Th
 
 ## Testing
 
+### Bugs
+
+On final deployment, a day before deadline and prior to my final mentor meeting, a major bug was discovered with my initial choice of text editor [CKEditor](https://ckeditor.com/).
+
+CKEditor had been chosen as it allowed the embedding of images and video within the message body. This was deemed to be beneficial as the developer would not have to take up Cloudinary storage space hosting these files, and instead users could use sites such as [Imgur](https://imgur.com/) and [YouTube](https://www.youtube.com/) and link from there.
+
+The editor worked perfectly in development. However on deployment, the entire comment window was not rendered, making it in effect useless as a user could not create a new thread. The below errors were recevied in the console:
+
+![CKEditor Error](/images/readme-images/images/capture-error.JPG)
+
+I tried numerous fixes such as adding new script tags as suggested in Stack Overflow, and a complete rebuild following this tutorial by [Selmi Tech](https://youtu.be/Zuatckos9Pg) and this by [Codemy](https://youtu.be/mF5jzSXb1dc), neither of which were successful.
+
+I then tried following again the instructions on the [CKEditor documentation](https://github.com/django-ckeditor/django-ckeditor/), double checking things like the static base path, and that all settings in settings.py were correct, and that urls.py was correctly updated.
+
+Finally I contacted Tutor Support. Unfortunately Tutor Support could not fix this issue either, and it was suggested that there was an issue with CKEditor accessing its static files through Cloudinary. 
+
+To this end I had to quickly rebuild this section of the site using Summernote, but as mentioned previously this meant that my inline image and video hosting capabilities were lost at this time. 
+
+As my project deadline was less than 24 hours away, and I had to fully test the site time ran out to find other ways to reintroduce these features, but it is something I would like to look at again in the future.
+
 <br>
 
 [Back to top](#table-of-contents)
@@ -387,7 +407,7 @@ For the final deployment to Heroku, the following was carried out:
 
 ## Credits
 
-Dummy text for display purposes for the threads was taken from a number of existing forums such as [mavicpilots.com](https://mavicpilots.com/)
+Dummy text for display purposes for the threads was taken from a number of existing forums such as [mavicpilots.com](https://mavicpilots.com/), [inspirepilots.com](https://inspirepilots.com/threads/remote-controller-charging-issues.24678/)
 
 I used this [article](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html) on how to use Q for complex queries to power the search functionality on the site.
 
