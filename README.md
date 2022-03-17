@@ -2,6 +2,8 @@
 
 Drone Digest is a public chat forum style website aimed at both individuals and commercial enterprises with interests in Unmanned Aerial Vehicles (UAVs), more commonly known as drones.
 
+
+
 The pace of change in the UAV market is extraordinary, with new regulations and equipment entering the market numerous times a year. The UAV market is predicted to be worth $63.6 billion by 2025 [*(Source)*](https://www.businessinsider.com/drone-industry-analysis-market-trends-growth-forecasts?r=US&IR=T) and will only get larger given technological advances in the use of drones for agriculture, construction and law enforcement to name but a few.
 
 Until now, current offerings for those interested in having a discussion about UAVs are spread far and wide, but only catering to a small niche of the market, for example particular types of aircraft, or split by commercial and hobbyist lines.

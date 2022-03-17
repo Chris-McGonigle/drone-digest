@@ -79,7 +79,7 @@ The site was tested for accessibility, performance and best practise using Googl
 
 ![Log On/Register Pages](/testing/testing-images/logon.JPG)
 
-![Create Thread]()
+![Create Thread](/testing/testing-images/create.JPG)
 
 ![Thread Window](/testing/testing-images/thread.JPG)
 
@@ -147,8 +147,11 @@ The condition is not none error was amended ande tested and passed. The other er
 
 ## Manual testing
 
-
  #### Responsive testing
+
+ The site was tested extensively using the dev tools facilties of Chrome, Safari and Firefox. It was tested against most popular makes of phones and tablets and was also tested via the [Am I Responsive](http://ami.responsivedesign.is/) website, the result of which can be seen as the introductory image to the README.md file.
+
+ It was found to be responsive across all tested platforms.
 
 
 <br>
@@ -159,6 +162,10 @@ The condition is not none error was amended ande tested and passed. The other er
 
 
  #### Element testing
+
+ All elements were tested for functionailty and were found to have passed as expected. The below screeshot details the tests carried out and is also available as an [excel spreadsheet](/testing/manual-testing.xlsx).
+
+ ![Manual Testing Results](/testing/testing-images/manual-testing.jpg)
 
 
 <br>
