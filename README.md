@@ -229,7 +229,7 @@ Three data models were used for this project as follows:
 
 The nav bar holds the site logo which hyperlinks back to the homepage from all other site pages. It also holds the site serach bar and the Log in/ Out link.
 
-![Nav Bar](/images/readme-images/images/nav.jpg)
+![Nav Bar](/images/readme-images/images/nav.JPG)
 
 #### Search Bar
 
