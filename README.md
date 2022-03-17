@@ -301,7 +301,7 @@ Particpants in a thread, or "droners" are shown in this window. The thread autho
 
 The site folder holds social media links and a link to the developers Github, These could be tailored to link to whatever required in a real world situation.
 
-![Site Footer](/workspace/drone-digest/images/readme-images/images/footer.JPG)
+![Site Footer](/images/readme-images/images/footer.JPG)
 
 <br>
 
