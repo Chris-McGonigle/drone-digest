@@ -79,9 +79,9 @@ The site was tested for accessibility, performance and best practise using Googl
 
 ![Log On/Register Pages](/testing/testing-images/logon.jpg)
 
-![Create Thread](/testing/testing-images/create.jpg)
+![Create Thread](/testing/testing-images/create.JPG)
 
-![Thread Window](/testing/testing-images/thread.jpg)
+![Thread Window](/testing/testing-images/thread.JPG)
 
 ![Confirm Delete](/testing/testing-images/confirm.jpg)
 
