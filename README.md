@@ -261,7 +261,7 @@ The thread author, when logged in, is also able to edit or delete the thread fro
 
 If a user is not logged in, these edit and delete links are removed, but the user can still view the thread details.
 
-![Thread Window Not Logged In](/workspace/drone-digest/images/readme-images/images/thread-logout.png)
+![Thread Window Not Logged In](/images/readme-images/images/thread-logout.png)
 
 
 #### Recent Activity Thread
