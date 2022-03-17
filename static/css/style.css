@@ -256,6 +256,11 @@ input[class^="comment-input"]::placeholder {
     transition: .3s box-shadow;
     padding: 10px;
     width: 80%;
+    color: black;
+}
+
+input[class^="form-input"]::placeholder {
+    color: black;
 }
 
 .form-input:hover {
@@ -315,6 +320,10 @@ label {
 
 .register-input-group {
     padding: 5px;
+}
+
+.register-input-group p input {
+    color: black;
 }
 
 
