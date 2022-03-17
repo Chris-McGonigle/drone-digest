@@ -124,11 +124,16 @@ You can view a live version of the [website](http://drone-digest.herokuapp.com/)
 
 * Homepage
 
-![Desktop](/images/readme-images/wireframes/home-page.png)
+![Desktop & Landscape Tablet](/images/readme-images/wireframes/home-page.png)
 
 * Opened thread
 
-![Desktop](/images/readme-images/wireframes/opened-thread.png)
+![Desktop & Landscape Tablet](/images/readme-images/wireframes/opened-thread.png)
+
+
+* Mobile and Portrait Tablet view
+
+![Mobile and Portrait Tablet](/images/readme-images/wireframes/mobile.png)
 
 
 <br>
