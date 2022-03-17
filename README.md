@@ -203,7 +203,6 @@ Three data models were used for this project as follows:
 
 ### Initial Deployment Features
 
-
 #### Navigation Bar
 
 The nav bar holds the site logo which hyperlinks back to the homepage from all other site pages. It also holds the site serach bar and the Log in/ Out link.
@@ -254,14 +253,33 @@ This added feature is only avaiable on desktop. The decision was taken due to sc
 
 #### View Thread Window
 
+When a thread is selected on the home page, the thread view window opens. It shows a history of the current thread, with comments under it listed with most recent first, and how long ago they were added. A user can also add a comment using the text box provided.
+
+When logged in, a user has the ability to delete their own comment. A decision was taken not to allow the editing of comments to ensure the continuity of conversation, and to be sure a proper history of the conversation is kept. 
+
+If editing was allowed, a user could come in after the fact and change their comment to something out of context and there is currently no way to show that a coomment has been edited. 
+
+If in future the ability to show a comment was edited, this functionality could be introduced, but at present it was deemed to be better not to have this function.
+
+![Thread Logged On](/images/readme-images/images/view-thread-log-in.JPG)
+
+When a user is not logged in, they are still able to view the thread details, but the option to comment is removed. This allows people to browse the site without the need for log in, for example of someone has asked a question and pops baack to see if they have had any replies, this functionality allows them to do so without logging in.
+
+![Thread Not Logged In](/images/readme-images/images/view-thread-log-out.JPG)
+
 
 #### Thread Participants
+
+Particpants in a thread, or "droners" are shown in this window. The thread author is shown as the original poster asgain, and as different users add comments, their name is added to the list. This was added to help generate a sense of community, and that people can see prevalent posters, and people who may be able to help. In future these would also be hyperlinks to a users indiviudal profile page.
+
+![Droners](/images/readme-images/images/participants.jpg)
 
 
 #### Site Footer
 
+The site folder holds social media links and a link to the developers Github, These could be tailored to link to whatever required in a real world situation.
 
-
+![Site Footer](/workspace/drone-digest/images/readme-images/images/footer.JPG)
 
 <br>
 
