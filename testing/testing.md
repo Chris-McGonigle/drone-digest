@@ -149,7 +149,7 @@ The condition is not none error was amended ande tested and passed. The other er
 
  #### Responsive testing
 
- The site was tested extensively using the dev tools facilties of Chrome, Safari and Firefox. It was tested against most popular makes of phones and tablets and was also tested via the [Am I Responsive](http://ami.responsivedesign.is/) website, the result of which can be seen as the introductory image to the README.md file.
+ The site was tested extensively using the dev tools facilties of Chrome, Safari and Firefox. It was tested against most popular makes of phones and tablets. 
 
  It was found to be responsive across all tested platforms.
 

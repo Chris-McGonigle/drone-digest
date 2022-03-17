@@ -2,7 +2,12 @@
 
 Drone Digest is a public chat forum style website aimed at both individuals and commercial enterprises with interests in Unmanned Aerial Vehicles (UAVs), more commonly known as drones.
 
+![Desktop View](/images/readme-images/images/desktop.png)
 
+![Mobile View](/images/readme-images/images/mobile.png)
+
+
+Please note the [Am I responsive](http://ami.responsivedesign.is/#) website would not render a display due to X-Frame Origins being set as advised in project walkthroughs[link](http://ami.responsivedesign.is/#)
 
 The pace of change in the UAV market is extraordinary, with new regulations and equipment entering the market numerous times a year. The UAV market is predicted to be worth $63.6 billion by 2025 [*(Source)*](https://www.businessinsider.com/drone-industry-analysis-market-trends-growth-forecasts?r=US&IR=T) and will only get larger given technological advances in the use of drones for agriculture, construction and law enforcement to name but a few.
 
@@ -37,6 +42,20 @@ You can view a live version of the [website](http://drone-digest.herokuapp.com/)
 
 
 ## Site Design Considerations
+
+From the outset, I wanted to provide a bright enticing colour scheme, with modern fonts to try and convey a sense of excitement, and to show that that the UAV world is modern and fun. Current forums online have a very bland colour scheme, normally just white backgrounds with black text.
+
+It was also important however to ensure that there was enough contrast between colours used for backgrounds and text. 
+
+I decided to go wih a blue/green pallette (Cello, #364958 and Paradiso, #55828B) for backgrounds, which modern colour theory psychology states provides calming attributes. 
+
+A shade of orange was used (International Orange, ##FF5400 for buttons and borders to help make these sections pop out, and highlight that users should direct their gaze to these areas. 
+
+Text color selected was Granny Apple (#C9E4CA), for it's contrast against the darker background, but still in keeping with the overall blue green feel I was trying to achieve. Black was used sparsely where even more legibility was required, for example in form input fields.
+
+Font selection was more diffcult, I was wanted something with a futuristic feel for my headings, to try and envoke how modern, fast paced and ever changing the UAV world is. To this end I chose [Orbitron](https://fonts.google.com/specimen/Orbitron). 
+
+This would have been too much to use throughout the entire site so to ensure the thread content remained legible I chose [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro) for my body text. I feel using the fonts in this way makes a good comprimise between legibility and trying to envoke an emotional response in the user.
 
 
 ### User Stories
@@ -477,7 +496,6 @@ As my project deadline was less than 24 hours away, and I had to fully test the 
 10. As a Site Admin, I want to be able to read, update and delete posts so that I can ensure all posts adhere to the site guidelines.
     * TEST PASSED
 
-
 <br>
 
 [Back to top](#table-of-contents)
@@ -511,9 +529,17 @@ For the final deployment to Heroku, the following was carried out:
 
 ## Credits
 
-Dummy text for display purposes for the threads was taken from a number of existing forums such as [mavicpilots.com](https://mavicpilots.com/), [inspirepilots.com](https://inspirepilots.com/threads/remote-controller-charging-issues.24678/)
+1. Dummy text for display purposes for the threads was taken from a number of existing forums such as [mavicpilots.com](https://mavicpilots.com/), [inspirepilots.com](https://inspirepilots.com/threads/remote-controller-charging-issues.24678/)
 
-I used this [article](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html) on how to use Q for complex queries to power the search functionality on the site.
+2. I used this [article](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html) on how to use Q for complex queries to power the search functionality on the site.
+
+3. [HTMLCSSColor](https://www.htmlcsscolor.com/) and [Coolors](https://coolors.co/?home) was used to help pick colour pallettes.
+
+4. Core functionality of the site was based on the Code Institute walkthrough, I think therefore I blog, and also tutorials by [Codemy](https://youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi) and [Traversy](https://youtu.be/PtQiiknWUcI)
+
+5. Tutorials by [StudyGyann](https://youtu.be/uJp4PaDkux0) and [Pretty Printed](https://youtu.be/VYs-u0g__1A) were used to help in the styling of form fields.
+
+6. I also used tutorials by [Academind](https://youtu.be/t7DrJqcUviA), [Tech With Tim](https://youtu.be/sm1mokevMWk) and [Problem Solving Point](https://youtu.be/QLL4KzFMfVw) to help further my understanding of the framework.
 
 <br>
 
