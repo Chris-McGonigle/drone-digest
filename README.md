@@ -27,13 +27,16 @@ You can view a live version of the [website](http://drone-digest.herokuapp.com/)
     * [Future Features](#future-features)    
 4. [Technologies Used](#technologies-used)
 5. [Testing](#testing)
-6. [Bugs](#bugs)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+    * [Bugs](#bugs)
+    * [User Story Testing](#user-story-testing)
+        * [EPIC 1 Testing](#epic-1-testing)
+        * [EPIC 2 Testing](#epic-2-testing) 
+        * [EPIC 3 Testing](#epic-3-testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
 
 
 ## Site Design Considerations
-
 
 
 ### User Stories
@@ -315,7 +318,6 @@ The site folder holds social media links and a link to the developers Github, Th
 
 <br>
 
-
 ## Technologies Used
 
 * [HTML5](https://en.wikipedia.org/wiki/HTML5) was used for the site markup.
@@ -372,7 +374,109 @@ As my project deadline was less than 24 hours away, and I had to fully test the 
 
 <br>
 
-## Bugs
+### User Story Testing
+
+#### EPIC 1 Testing
+
+1. As a User, I want to create an account using my email address so that I can create threads and comment on existing posts.
+    * TEST PASSED
+
+2. As a User, I want to create an account using my social media log in so that I can create threads and comment on existing posts.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+3. As a User, I want to be able to view posts without logging in so that I can quickly catch up on conversation I have been involved in.
+    * TEST PASSED
+
+4. As a User, I want to be able to reset my password  so that I can still access my account if I forget it.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+5. As a User, I want to be able to create a basic profile including a profile picture so that I can tell other users a little about myself.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+6. As a User, I want to be able to see a history of posts I have made in my profile so that I can easily reference old conversations.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+7. As a User, I want to be abe to see who is currently online so that I can interact with friends made on the platform in real time.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+8. As a User, I want to be able to message other users so that I can interact privately with individuals.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+9. As a User, I want to be able to report accounts so that I can highlight behaviour that goes against the forum rules.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+10. As a Site Admin, I want to be able to create and assign moderators so that I can spread the workload of approving comments.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+#### EPIC 2 Testing
+
+1. As a User, I want to be able to view a list of threads so that I select one to read.
+    * TEST PASSED
+
+2. As a User, I want to be able to filter threads by topic so that I select a topic that interests me.
+    * TEST PASSED
+
+3. As a User, I want to see a count of activity on a thread so that I can see the number of replies and views on a thread.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+4. As a User, I want to be able to expand a thread so that I can view all of the posts made related to it.
+    * TEST PASSED
+
+5. As a User, I want to be able to see a list of who has participated in a thread so that I can easily see people I have interacted with before and new users.
+    * TEST PASSED
+
+6. As a User, I want to be able to create a new thread from the homepage so that I don’t have to go into a topic to create one.
+    * TEST PASSED
+
+7. As a User, I want to be able to search for topics and threads and users so that I easily find people or topics that interest me.
+    * TEST PASSED
+
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+
+#### EPIC 3 Testing
+
+1. As a User, I want to be able to create a new post so that I can start a conversation with other people.
+    * TEST PASSED
+
+2. As a User, I want to be able to comment on existing posts so that I can be involved in discussions.
+    * TEST PASSED
+
+3. As a User, I want to be able to edit existing posts that I have made so that I can amend any mistakes I may have made.
+    * TEST PART PASSED - Users can edit original thread post but not comments to ensure continuity of conversation history
+
+4. As a User, I want to be able to delete posts that I have made so that I manage my content.
+    * TEST PASSED
+
+5. As a User, I want to be able to see when a post was created or updated so that I can see how recent thread activity was.
+    * TEST PASSED
+
+6. As a User, I want to be able to add images to a post so that I so I can share examples or illustrate my point.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+7. As a User, I want to be able to click on a post author so that I can find out further information about them or other posts that they have made.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+8. As a User, I want to be able to 'like' a post so that I can interact with the content and see which are the most popular posts.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+9. As a Site Admin, I want to be able to approve or disprove posts so that I can ensure all posts adhere to the site guidelines.
+    * TEST FAILED - TO BE INTRODUCED IN FUTURE ITERATION
+
+10. As a Site Admin, I want to be able to read, update and delete posts so that I can ensure all posts adhere to the site guidelines.
+    * TEST PASSED
+
 
 <br>
 
