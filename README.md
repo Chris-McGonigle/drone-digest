@@ -367,6 +367,8 @@ The site folder holds social media links and a link to the developers Github, Th
 
 ## Testing
 
+A dedicated testing section covering validator and manual testing can be found in the [testing.md](/testing/testing.md) documentation
+
 ### Bugs
 
 On final deployment, a day before deadline and prior to my final mentor meeting, a major bug was discovered with my initial choice of text editor [CKEditor](https://ckeditor.com/).
