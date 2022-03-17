@@ -204,25 +204,61 @@ Three data models were used for this project as follows:
 ### Initial Deployment Features
 
 
-#### Navigation Search Bar
+#### Navigation Bar
+
+The nav bar holds the site logo which hyperlinks back to the homepage from all other site pages. It also holds the site serach bar and the Log in/ Out link.
+
+![Nav Bar](/images/readme-images/images/nav.jpg)
+
+#### Search Bar
+
+The site search bar serach the entire site via either subject, name or description. It will return results on full or part parameters. The search bar utilises the Q queryset object imported from Django models to handle complex queries.
+
+![Search Bar](/images/readme-images/images/search.JPG)
 
 
 #### Logged In Status
 
+Once logged in, the logged in status offers a greeting to the user to confirm that they are logged in.
+
+![Logged In Status](/images/readme-images/images/log.JPG)
 
 #### Subject Filtering
+
+A User can select a thread subject of their choice from the menu on the left (or through the pop up menu on mobile). A list of relevant threads is then displayed to the user on that subject. The thread counter also updates with the number of threads in that subject. By selecting 'All' the filter is removed and shows all available threads.
+
+![Subject filtering](/images/readme-images/images/filter.JPG)
 
 
 #### Post Thread Window
 
+The post thread window on the homepage shows the latest threads created in chronilogical order. It provides the thread title, which links to the main details of the thread, the author, the thread subject, and the thread description.
+
+The thread author, when logged in, is also able to edit or delete the thread from this window. Threads not started by the author are not available to them to the Edit and Delete Links are hidden for them.
+
+![Thread Window Logged In](/images/readme-images/images/thread-login.png)
+
+If a user is not logged in, these edit and delete links are removed, but the user can still view the thread details.
+
+![Thread Window Not Logged In](/workspace/drone-digest/images/readme-images/images/thread-logout.png)
+
 
 #### Recent Activity Thread
+
+The recent activity thread lists the most recent comments on thread posts. It is designed to help site engagement by showing a user active conversations. By displaying the time, as well as the room details it shows a user how active the site is. For display purposes only the first 50 characters of the comment is displayed.
+
+This added feature is only avaiable on desktop. The decision was taken due to screen size restrictions and the thought that having this as a pop out window similar to the Browse Subject window would not add much to the mobile experience. This could be achieved in future by hosting activity om its own html page and inserting on the homepage via templating for desktop. It does however appear on larger tablets in landscape mode. 
+
+![Recent Activity Thread](/images/readme-images/images/activity-thread.png)
 
 
 #### View Thread Window
 
 
 #### Thread Participants
+
+
+#### Site Footer
 
 
 
@@ -332,6 +368,10 @@ For the final deployment to Heroku, the following was carried out:
 <br>
 
 ## Credits
+
+Dummy text for display purposes for the threads was taken from a number of existing forums such as [mavicpilots.com](https://mavicpilots.com/)
+
+I used this [article](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html) on how to use Q for complex queries to power the search functionality on the site.
 
 <br>
 
