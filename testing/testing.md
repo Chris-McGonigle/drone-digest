@@ -75,13 +75,13 @@ One error was found were there was a space between the digit and the px value. T
 
 The site was tested for accessibility, performance and best practise using Google's [Lighthouse](https://developers.google.com/web/tools/lighthouse) tool. The results were as follows:
 
-![Homepage](/testing/testing-images/homepage.JPG)
+![Homepage](/testing/testing-images/homepage.jpg)
 
-![Log On/Register Pages](/testing/testing-images/logon.JPG)
+![Log On/Register Pages](/testing/testing-images/logon.jpg)
 
-![Create Thread](/testing/testing-images/create.JPG)
+![Create Thread](/testing/testing-images/create.jpg)
 
-![Thread Window](/testing/testing-images/thread.JPG)
+![Thread Window](/testing/testing-images/thread.jpg)
 
 ![Confirm Delete](/testing/testing-images/confirm.jpg)
 
