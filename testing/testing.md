@@ -137,7 +137,29 @@ No issues found.
 views.py
 ![views.py](/testing/testing-images/views-py.JPG)
 
-The errors found here were ignored. Error one character lenght was over by one character only so was deemed to not be necessary to change. The condition is not none error was left as the method was operating as expected and I did not want to break and was unsure of the corect syntax. The line breaks were also ignored as this was a string of search terms and again I wanted to ensure that the method kept working as required.
+The condition is not none error was amended ande tested and passed. The other errors found here were ignored. Error one character lengtt was over by one character only so was deemed to not be necessary to change. The line breaks were ignored as this was a string of search terms and again I wanted to ensure that the method kept working as required.
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Manual testing
+
+
+ #### Responsive testing
+
+
+<br>
+
+[Back to top](#table-of-contents)
+
+<br>
+
+
+ #### Element testing
+
 
 <br>
 
