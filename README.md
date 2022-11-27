@@ -15,7 +15,7 @@ Until now, current offerings for those interested in having a discussion about U
 
 The Drone Digest aims to provide a 'one stop shop' for all of these strands, bringing together experience from across the sector so seasoned and budding UAV pilots alike can share experiences, expertise and keep up to date with the latest changes in this ever evolving and growing sector.
 
-You can view a live version of the [website](http://drone-digest.herokuapp.com/) 
+You can view a live version of the [website](https://drone-digest.onrender.com) 
 
 ## Table of Contents
 
