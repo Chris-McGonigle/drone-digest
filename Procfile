@@ -1,1 +1,0 @@
-web: gunicorn drone_digest.wsgi
